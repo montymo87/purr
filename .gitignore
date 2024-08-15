@@ -1,27 +1,11 @@
-# See http://help.github.com/ignore-files/ for more about ignoring files.
+# Игнорируем все файлы и папки по умолчанию
+*
 
-# Mac OS X
-.DS_Store
-._.*
-._*
+# Исключаем папку dist из игнорирования, чтобы иметь возможность залить файлы внутри нее
+!dist/
 
-# Ignore local editor
-.project
-.settings
-.idea
-.vscode
-*.swp
-tags
-nbproject/*
+# Игнорируем саму папку dist, но не ее содержимое
+dist/*
 
-# Windows
-Thumbs.db
-
-npm-debug.log
-
-/dist
-build/
-source/
-public/
-
-node_modules/
+# Исключаем все файлы и папки внутри папки dist из игнорирования
+!dist/**/*
