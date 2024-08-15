@@ -1,4 +1,5 @@
-// import formMask from 'components/form-mask';
+import copy from 'components/copy';
+// import copy from 'components/copy';
 
 import layout from 'layout/layout';
 import { pageLoad } from './utils';
@@ -13,7 +14,7 @@ export default class App {
 		pageLoad(() => {
 			document.body.classList.add('body--loaded');
 
-			console.log('test');
+			copy();
 		});
 		// setTimeout(() => {
 		// 	this.importPage();
