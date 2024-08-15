@@ -1,2 +1,19 @@
 mixin header
 	header.header
+		.header__in
+			.header__logo_w
+				+picture({
+					img: `logo.png`,
+					class: 'header__img_w',
+					img_class: 'header__img',
+					alt: 'some image',
+				})
+
+				.header__logo_cta catcoins #[br] ofsolana
+
+			.header__link_w.js-text-copy-w
+				.header__link_name.js-text-copy-name CA:
+				.header__link_link.js-text-copy-text HkS48VcKhzgYSmF882JkyKAM4fgZMtnwYj42Yxzuxjti
+				button(type="button").header__link_btn_copy Copy
+
+

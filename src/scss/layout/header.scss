@@ -1,17 +1,148 @@
 //------------------------------------------------------------layout
 .header {
-	position: fixed;
+	position: absolute;
 	top: 0;
 	left: 0;
 
 	height: var(--height-header);
 	width: 100%;
+	padding: 0 2rem;
 
 	font-size: 1rem;
 
 	will-change: transform;
 
 	@include z-index(header);
+
+	@include bp($point_2, min) {
+		padding-top: 1.7rem;
+	}
+	@include bp($point_3) {
+		padding-top: 6.5rem;
+	}
 }
 
 //------------------------------------------------------------layout###
+
+.header__in {
+	max-width: $page_width;
+	width: 100%;
+	margin: 0 auto;
+
+	@include bp($point_2, min) {
+		@include flex_block(row, wrap, flex-start, center, center);
+	}
+	@include bp($point_3) {
+		@include flex_block(column, wrap, center, center, center);
+	}
+}
+
+.header__logo_w {
+	@include flex_block(row, wrap, flex-start);
+
+	@include bp($point_2, min) {
+		margin-right: auto;
+	}
+	@include bp($point_3) {
+		margin-bottom: 4.2rem;
+	}
+}
+
+.header__img_w {
+	flex: none;
+	display: block;
+
+	img {
+		@include contain_img;
+	}
+
+	@include bp($point_2, min) {
+		width: 12rem;
+		height: 12.5rem;
+		margin-bottom: -4rem;
+	}
+	@include bp($point_3) {
+		width: 9rem;
+		height: 9.5rem;
+	}
+}
+
+.header__logo_cta {
+	color: #fff;
+	font-weight: 400;
+	line-height: 1.21;
+
+	@include bp($point_2, min) {
+		padding: 1rem 0 0 0.7rem;
+		font-size: 2.6rem;
+		text-shadow: 0.5rem 0.5rem #000;
+	}
+	@include bp($point_3) {
+		padding: 1.2rem 0 0 2.4rem;
+		font-size: 2.4rem;
+		text-shadow: 0.4rem 0.3rem #000;
+	}
+}
+
+.header__link_w {
+	font-family: $font_2;
+
+	@include bp($point_2, min) {
+		@include flex_block(row, wrap, flex-start, center, center);
+		gap: 2.4rem;
+	}
+	@include bp($point_3) {
+		@include flex_block(column, wrap, center, center, center);
+		gap: 1.2rem;
+	}
+}
+
+.header__link_name {
+	color: $black;
+	text-shadow: 0.3rem 0.3rem $red_2;
+	font-size: 2.8rem;
+}
+
+.header__link_link {
+	color: $red_2;
+	text-shadow: 0.3rem 0.3rem $black;
+
+	@include bp($point_2, min) {
+		font-size: 2.8rem;
+	}
+	@include bp($point_3) {
+		padding: 0 1rem;
+		line-height: 1.2;
+		letter-spacing: -0.001em;
+		font-size: 2.4rem;
+		word-break: break-all;
+		text-align: center;
+	}
+}
+
+.header__link_btn_copy {
+	@include flex_block(row, wrap, center, center, center);
+	height: 3.9rem;
+	border-radius: 50rem;
+	border: 1px solid $white;
+
+	line-height: 3.9rem;
+	font-size: 2rem;
+	color: $black;
+	text-shadow: 1px 1px $red_2;
+	background-color: rgba($white, 0.3);
+	transition: background-color ease 0.3s;
+	cursor: pointer;
+
+	&:hover {
+		background-color: $white;
+	}
+
+	@include bp($point_2, min) {
+		padding: 0 1.4rem;
+	}
+	@include bp($point_3) {
+		padding: 0 2rem;
+		margin-top: 0.5rem;
+	}
+}

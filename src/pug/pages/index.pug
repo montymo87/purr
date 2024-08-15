@@ -5,5 +5,76 @@ block vars
 	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'Index', template_name: 'index'}
 
 block content_block
-	section.section.index_section.demo_mod
-		h1.section_title Hola #[a.test(href='https://glivera-team.com/') Maketodor] :)
+	section.hero
+		+picture({
+			media: 1024,
+			img: `bg-new.jpg`,
+			img_mob: 'bg-mobile.png',
+			class: 'hero__img_w',
+			img_class: 'hero__img',
+			alt: 'some image',
+		})
+		.hero__cat_img_box
+			+picture({
+				media: 1024,
+				img: `cat.jpg`,
+				img_mob: 'cat-mob.png',
+				class: 'hero__cat_img_w',
+				img_class: 'hero__cat_img',
+				alt: 'some image',
+			})
+		.hero__cloud_img_box
+			+picture({
+				img: `cloud.png`,
+				class: 'hero__cloud_img_w',
+				img_class: 'hero__cloud_img',
+				alt: 'some image',
+			})
+		.hero__cloud_img_box.hero__cloud_img_box--small
+			+picture({
+				img: `cloud.png`,
+				class: 'hero__cloud_img_w',
+				img_class: 'hero__cloud_img',
+				alt: 'some image',
+			})
+		.hero__in
+			.hero__heading
+				h1.hero__title #[span Purr & Earn] #[br] together!
+				.hero__btn_w
+					+picture({
+						img: `ears.png`,
+						class: 'hero__ears_img_w',
+						img_class: 'hero__ears__img',
+						alt: 'some image',
+					})
+					+picture({
+						img: `tail.png`,
+						class: 'hero__tail_img_w',
+						img_class: 'hero__tail__img',
+						alt: 'some image',
+					})
+					.hero__decor_w(aria-hidden="true")
+						each item, index in ['arr-1','arr-2','arr-3','arr-4']
+							.hero__decor(class=`hero__decor--${index + 1}`)
+								+icon(item, 'icon--size_mod')
+
+					a(href="#").hero__btn Join the wave!
+
+		.hero__footer_box
+			+picture({
+				img: `footer.png`,
+				class: 'hero__footer_img_w',
+				img_class: 'hero__footer_img',
+				alt: 'some image',
+			})
+			.hero__footer_box_in
+				.hero__footer_title Social media
+				ul.hero__footer_social_list
+					each item in ['telega', 'x']
+						li.hero__footer_social_item
+							a(href="#" alt="social icon").hero__footer_social_link
+								+icon(item, 'icon--size_mod')
+
+				.hero__footer_rights All rights reserved © 2024 – catsofsolana.com
+
+
