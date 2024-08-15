@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" data-template-name="article">
+  <head>
+    <meta charset="UTF-8">
+    <title>Article</title>
+    <meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="icon" sizes="16x16 32x32 64x64" href="images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="196x196" href="/favicon-192.png">
+    <link rel="icon" type="image/png" sizes="160x160" href="/favicon-160.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="/favicon-64.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+    <link rel="apple-touch-icon" href="/favicon-57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/favicon-114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicon-72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/favicon-144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/favicon-60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/favicon-120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/favicon-76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/favicon-152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="/favicon-144.png">
+    <meta name="msapplication-config" content="/browserconfig.xml">
+  <link href="css/app.css" rel="stylesheet"></head>
+  <body>
+    <div class="preloader"></div>
+    <header class="header">
+      <div class="header__in">
+        <div class="header__logo_w">
+          <picture class="header__img_w">
+            <source srcset="images/logo.png.webp" type="image/webp">
+            <source srcset="images/logo.png" type="image/png"><img class="header__img" src="images/logo.png" alt="some image" loading="lazy">
+          </picture>
+          <div class="header__logo_cta">catcoins <br> ofsolana</div>
+        </div>
+        <div class="header__link_w js-text-copy-w">
+          <div class="header__link_name js-text-copy-name">CA:</div>
+          <div class="header__link_link js-text-copy-text">HkS48VcKhzgYSmF882JkyKAM4fgZMtnwYj42Yxzuxjti</div>
+          <button class="header__link_btn_copy" type="button">Copy</button>
+        </div>
+      </div>
+    </header>
+    <div class="wrapper">
+      <div class="base">
+        <style>
+          .article_content {
+          	font-size: 1.6rem;
+          }
+          h1 {
+          	font-size: 2.8rem;
+          	margin-bottom: 3rem;
+          }
+          h2 {
+          	font-size: 2.4rem;
+          	margin-bottom: 1.6rem;
+          }
+          h3 {
+          	font-size: 2rem;
+          	margin-bottom: 1rem;
+          }
+          p {
+          	margin-bottom: 1rem;
+          }
+          ul,ol {
+          	margin-bottom: 1.6rem;
+          }
+        </style>
+        <section class="section article_content">
+          <div class="section_in">
+            <h1>Markup requirements and examples for WP article single page (blog single post, etc.)</h1>
+            <h2>Example on WP site <a href="https://woo.glivera.com/test-page/">here</a></h2>
+            <h2>Section should be named .article_content <br> All styles will be nested from parent selector, for ex. article_content p {some style}</h2>
+            <h2> </h2>
+            <h2>Simple paragraph</h2>
+            <p><b>Lorem ipsum</b> is simply dummy text of the <i>printing</i> and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer took a galley 
+              of type and scrambled it to make a type specimen book. It has survived not only five centuries
+            </p>
+            <p><b>Lorem ipsum</b> is simply dummy text of the <i>printing</i> and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer took a galley 
+              of type and scrambled it to make a type specimen book. It has survived not only five centuries				
+            </p>
+            <h2>UL list </h2>
+            <ul>
+              <li>list item</li>
+              <li>list item</li>
+              <li>list item</li>
+            </ul>
+            <h2>OL list </h2>
+            <ol>
+              <li>list item</li>
+              <li>list item</li>
+              <li>list item		</li>
+            </ol>
+            <h2>WP table </h2>
+            <figure class="wp-block-table">
+              <table>
+                <tbody>
+                  <tr>
+                    <td>table cell</td>
+                    <td>table cell</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <figcaption>table caption</figcaption>
+            </figure>
+            <h2>WP embeded video</h2>
+            <figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio">
+              <div class="wp-block-embed__wrapper">
+                <iframe title="Rick Astley - Never Gonna Give You Up (Official Music Video)" width="525" height="295" src="https://www.youtube.com/embed/dQw4w9WgXcQ?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+              </div>
+              <figcaption>video caption</figcaption>
+            </figure>
+            <h2>WP simple blockquote </h2>
+            <blockquote class="wp-block-quote">
+              <p>Quote description, can be <strong>bold</strong><em>italic</em></p>
+              <cite>Quote Author, can be <strong>bold</strong><em>italic</em></cite>
+            </blockquote>
+            <h2>WP Single image </h2>
+            <figure class="wp-block-image"><img class="wp-image-77 loading" loading="lazy" width="801" height="801" src="http://woo.glivera.com/wp-content/uploads/2022/10/long-sleeve-tee-2.jpg" alt="" srcset="https://woo.glivera.com/wp-content/uploads/2022/10/long-sleeve-tee-2.jpg 801w, https://woo.glivera.com/wp-content/uploads/2022/10/long-sleeve-tee-2-100x100.jpg 100w, https://woo.glivera.com/wp-content/uploads/2022/10/long-sleeve-tee-2-600x600.jpg 600w, https://woo.glivera.com/wp-content/uploads/2022/10/long-sleeve-tee-2-300x300.jpg 300w, https://woo.glivera.com/wp-content/uploads/2022/10/long-sleeve-tee-2-150x150.jpg 150w, https://woo.glivera.com/wp-content/uploads/2022/10/long-sleeve-tee-2-768x768.jpg 768w" sizes="(max-width: 801px) 100vw, 801px">
+              <figcaption>image caption </figcaption>
+            </figure>
+            <h2>WP Media & text </h2>
+            <div class="wp-block-media-text alignwide is-stacked-on-mobile is-vertically-aligned-top" style="grid-template-columns:19% auto">
+              <figure class="wp-block-media-text__media"><img class="size-full loading" loading="lazy" width="128" height="77" src="http://woo.glivera.com/wp-content/uploads/2022/12/logo_woo.png" alt="" data-was-processed="true"></figure>
+              <div class="wp-block-media-text__content">
+                <p></p>adipiscing at in tellus integer feugiat scelerisque varius morbi enim nunc faucibus a pellentesque sit amet porttitor eget dolor morbi non arcu risus quis varius quam quisque id diam vel quam elementum pulvinar etiam non quam lacus suspendisse faucibus interdum posuere lorem ipsum dolor sit amet consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula ipsum a arcu cursus vitae congue mauris rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  <script defer src="js/app.js"></script></body>
+</html>
