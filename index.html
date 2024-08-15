@@ -34,16 +34,16 @@
     <header class="header">
       <div class="header__in">
         <div class="header__logo_w">
-          <picture class="header__img_w">
+          <picture class="header__img_w js-fade-start">
             <source srcset="images/logo.png.webp" type="image/webp">
             <source srcset="images/logo.png" type="image/png"><img class="header__img" src="images/logo.png" alt="some image" loading="lazy">
           </picture>
-          <div class="header__logo_cta">catcoins <br> ofsolana</div>
+          <div class="header__logo_cta js-fade-start">catcoins <br> ofsolana</div>
         </div>
         <div class="header__link_w js-text-copy-w">
-          <div class="header__link_name js-text-copy-name">CA:</div>
-          <div class="header__link_link js-text-copy-text">HkS48VcKhzgYSmF882JkyKAM4fgZMtnwYj42Yxzuxjti</div>
-          <button class="header__link_btn_copy" type="button">Copy</button>
+          <div class="header__link_name js-fade-start">CA:</div>
+          <div class="header__link_link js-fade-start js-text-copy-text">HkS48VcKhzgYSmF882JkyKAM4fgZMtnwYj42Yxzuxjti</div>
+          <button class="header__link_btn_copy js-fade-start js-text-copy-btn" type="button">Copy</button>
         </div>
       </div>
     </header>
@@ -56,64 +56,66 @@
             <source media="(max-width: 1023px)" srcset="images/bg-mobile.png.webp" type="image/webp">
             <source media="(max-width: 1023px)" srcset="images/bg-mobile.png" type="image/png"><img class="hero__img" src="images/bg-new.jpg" alt="some image" loading="lazy">
           </picture>
-          <div class="hero__cat_img_box">
-            <picture class="hero__cat_img_w">
+          <div class="hero__cat_img_box js-cat-img-w">
+            <picture class="hero__cat_img_w js-cat-img">
               <source media="(min-width: 1024px)" srcset="images/cat.jpg.webp" type="image/webp">
               <source media="(min-width: 1024px)" srcset="images/cat.jpg" type="image/jpeg">
               <source media="(max-width: 1023px)" srcset="images/cat-mob.png.webp" type="image/webp">
               <source media="(max-width: 1023px)" srcset="images/cat-mob.png" type="image/png"><img class="hero__cat_img" src="images/cat.jpg" alt="some image" loading="lazy">
             </picture>
           </div>
-          <div class="hero__cloud_img_box">
-            <picture class="hero__cloud_img_w">
+          <div class="hero__cloud_img_box js-cloud-img-w">
+            <picture class="hero__cloud_img_w js-cloud-img">
               <source media="(max-width: 1023px)" srcset="images/cloud.png.webp" type="image/webp">
               <source media="(max-width: 1023px)" srcset="images/cloud.png" type="image/png"><img class="hero__cloud_img" src="images/cloud.png" alt="some image" loading="lazy">
             </picture>
           </div>
-          <div class="hero__cloud_img_box hero__cloud_img_box--small">
-            <picture class="hero__cloud_img_w">
+          <div class="hero__cloud_img_box hero__cloud_img_box--small js-cloud-img-w">
+            <picture class="hero__cloud_img_w js-cloud-img">
               <source media="(max-width: 1023px)" srcset="images/cloud.png.webp" type="image/webp">
               <source media="(max-width: 1023px)" srcset="images/cloud.png" type="image/png"><img class="hero__cloud_img" src="images/cloud.png" alt="some image" loading="lazy">
             </picture>
           </div>
           <div class="hero__in">
             <div class="hero__heading">
-              <h1 class="hero__title"><span>Purr & Earn</span> <br> together!</h1>
+              <h1 class="hero__title js-title-start"><span>Purr & Earn</span> <br> together!</h1>
               <div class="hero__btn_w">
-                <picture class="hero__ears_img_w">
-                  <source media="(max-width: 1023px)" srcset="images/ears.png.webp" type="image/webp">
-                  <source media="(max-width: 1023px)" srcset="images/ears.png" type="image/png"><img class="hero__ears__img" src="images/ears.png" alt="some image" loading="lazy">
-                </picture>
-                <picture class="hero__tail_img_w">
-                  <source media="(max-width: 1023px)" srcset="images/tail.png.webp" type="image/webp">
-                  <source media="(max-width: 1023px)" srcset="images/tail.png" type="image/png"><img class="hero__tail__img" src="images/tail.png" alt="some image" loading="lazy">
-                </picture>
                 <div class="hero__decor_w" aria-hidden="true">
                   <div class="hero__decor hero__decor--1">
-                    <svg class="icon icon_arr-1 icon--size_mod">
+                    <svg class="icon icon_arr-1 icon--size_mod js-arrows-start">
                       <use xlink:href="images/sprite/sprite.svg#arr-1"></use>
                     </svg>
                   </div>
                   <div class="hero__decor hero__decor--2">
-                    <svg class="icon icon_arr-2 icon--size_mod">
+                    <svg class="icon icon_arr-2 icon--size_mod js-arrows-start">
                       <use xlink:href="images/sprite/sprite.svg#arr-2"></use>
                     </svg>
                   </div>
                   <div class="hero__decor hero__decor--3">
-                    <svg class="icon icon_arr-3 icon--size_mod">
+                    <svg class="icon icon_arr-3 icon--size_mod js-arrows-start">
                       <use xlink:href="images/sprite/sprite.svg#arr-3"></use>
                     </svg>
                   </div>
                   <div class="hero__decor hero__decor--4">
-                    <svg class="icon icon_arr-4 icon--size_mod">
+                    <svg class="icon icon_arr-4 icon--size_mod js-arrows-start">
                       <use xlink:href="images/sprite/sprite.svg#arr-4"></use>
                     </svg>
                   </div>
-                </div><a class="hero__btn" href="#">Join the wave!</a>
+                </div>
+                <div class="hero__btn_box js-btn-start">
+                  <picture class="hero__ears_img_w">
+                    <source media="(max-width: 1023px)" srcset="images/ears.png.webp" type="image/webp">
+                    <source media="(max-width: 1023px)" srcset="images/ears.png" type="image/png"><img class="hero__ears__img" src="images/ears.png" alt="some image" loading="lazy">
+                  </picture>
+                  <picture class="hero__tail_img_w">
+                    <source media="(max-width: 1023px)" srcset="images/tail.png.webp" type="image/webp">
+                    <source media="(max-width: 1023px)" srcset="images/tail.png" type="image/png"><img class="hero__tail__img" src="images/tail.png" alt="some image" loading="lazy">
+                  </picture><a class="hero__btn" href="#">Join the wave!</a>
+                </div>
               </div>
             </div>
           </div>
-          <div class="hero__footer_box">
+          <div class="hero__footer_box js-footer-start">
             <picture class="hero__footer_img_w">
               <source media="(max-width: 1023px)" srcset="images/footer.png.webp" type="image/webp">
               <source media="(max-width: 1023px)" srcset="images/footer.png" type="image/png"><img class="hero__footer_img" src="images/footer.png" alt="some image" loading="lazy">
