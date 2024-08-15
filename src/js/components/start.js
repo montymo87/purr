@@ -52,7 +52,7 @@ const animation = () => {
 		{
 			scale: 0,
 			ease: 'elastic.out(1,0.3)',
-			duration: 0.4,
+			duration: 0.6,
 			stagger: 0.1,
 		},
 		'-=1',
