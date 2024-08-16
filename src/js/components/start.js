@@ -7,7 +7,7 @@ const animation = () => {
 		btn: '.js-btn-start',
 		arrows: '.js-arrows-start',
 		footer: '.js-footer-start',
-		clouds: '.js-cloud-img',
+		clouds: '.js-start-cloud-img',
 	};
 
 	const tlHeader = gsap.timeline({ delay: 0.2 });
@@ -21,7 +21,7 @@ const animation = () => {
 	tlHeader.from($fadeEl, {
 		opacity: 0,
 		ease: 'none',
-		duration: 0.1,
+		duration: 0.2,
 		stagger: 0.1,
 		y: 10,
 	});
@@ -29,10 +29,12 @@ const animation = () => {
 	tlHeader.from(
 		$title,
 		{
-			scale: 0,
-			rotateZ: 130,
-			duration: 1.5,
-			ease: 'elastic.out(1,0.3)',
+			// scale: 0,
+			// rotateZ: 130,
+			opacity: 0,
+			y: 30,
+			duration: 1,
+			ease: 'power1.out',
 		},
 		'-=.6',
 	);
@@ -40,9 +42,10 @@ const animation = () => {
 	tlHeader.from(
 		$btn,
 		{
-			rotateX: -90,
-			duration: 1.3,
-			ease: 'elastic.out(1,0.3)',
+			y: 30,
+			opacity: 0,
+			duration: 1,
+			ease: 'power1.out',
 		},
 		'-=1',
 	);
@@ -51,8 +54,8 @@ const animation = () => {
 		$arrows,
 		{
 			scale: 0,
-			ease: 'elastic.out(1,0.3)',
-			duration: 0.6,
+			ease: 'power1.out',
+			duration: 0.2,
 			stagger: 0.1,
 		},
 		'-=1',
@@ -61,9 +64,9 @@ const animation = () => {
 	tlHeader.from(
 		$footer,
 		{
-			scale: 0,
-			duration: 1.6,
-			ease: 'elastic.out(1,0.3)',
+			y: 300,
+			duration: 0.8,
+			ease: 'power1.out',
 		},
 		'-=1.2',
 	);
@@ -71,9 +74,10 @@ const animation = () => {
 	tlHeader.from(
 		$clouds,
 		{
-			scale: 0,
+			y: 300,
+			x: 300,
 			duration: 1,
-			ease: 'elastic.out(1,0.3)',
+			ease: 'power1.out',
 		},
 		'-=1.4',
 	);

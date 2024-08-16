@@ -71,16 +71,15 @@
 	color: #fff;
 	font-weight: 400;
 	line-height: 1.21;
+	text-shadow: 0.3rem 0.3rem #000;
 
 	@include bp($point_2, min) {
 		padding: 1rem 0 0 0.7rem;
 		font-size: 2.6rem;
-		text-shadow: 0.5rem 0.5rem #000;
 	}
 	@include bp($point_3) {
 		padding: 1.2rem 0 0 2.4rem;
 		font-size: 2.4rem;
-		text-shadow: 0.4rem 0.3rem #000;
 	}
 }
 
@@ -99,13 +98,13 @@
 
 .header__link_name {
 	color: $black;
-	text-shadow: 0.3rem 0.3rem $red_2;
+	text-shadow: 0.2rem 0.2rem $red_2;
 	font-size: 2.8rem;
 }
 
 .header__link_link {
 	color: $red_2;
-	text-shadow: 0.3rem 0.3rem $black;
+	text-shadow: 0.2rem 0.2rem $black;
 
 	@include bp($point_2, min) {
 		font-size: 2.8rem;
