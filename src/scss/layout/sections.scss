@@ -1,5 +1,7 @@
 //---------------------------------------------sections
 
+.js-tail-start,
+.js-ears-start,
 .js-start-cloud-img,
 .js-cloud-img-w,
 .js-cloud-img,
@@ -65,18 +67,14 @@
 
 .hero__cat_img_box {
 	z-index: 2;
-	bottom: -0.5rem;
-	right: 4.1rem;
-	width: 55.8vw;
-	height: 86vh;
 	overflow: hidden;
 
 	@include bp($point_2, min) {
 		position: absolute;
 		bottom: -0.5rem;
-		right: 4.1rem;
-		width: 55.8vw;
-		height: 86vh;
+		right: 4rem;
+		width: 55.9vw;
+		height: 86.1vh;
 		clip-path: polygon(25.5% 0.7%, 90.1% 8.9%, 99.7% 100%, 0% 104.4%);
 	}
 	@include bp($point_3) {

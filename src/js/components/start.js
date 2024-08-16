@@ -8,6 +8,8 @@ const animation = () => {
 		arrows: '.js-arrows-start',
 		footer: '.js-footer-start',
 		clouds: '.js-start-cloud-img',
+		tail: '.js-tail-start',
+		ears: '.js-ears-start',
 	};
 
 	const tlHeader = gsap.timeline({ delay: 0.2 });
@@ -17,6 +19,8 @@ const animation = () => {
 	const $title = document.querySelector(SELECTORS.title);
 	const $btn = document.querySelector(SELECTORS.btn);
 	const $footer = document.querySelector(SELECTORS.footer);
+	const $tail = document.querySelector(SELECTORS.tail);
+	const $ears = document.querySelector(SELECTORS.ears);
 
 	tlHeader.from($fadeEl, {
 		opacity: 0,
@@ -80,6 +84,24 @@ const animation = () => {
 			ease: 'power1.out',
 		},
 		'-=1.4',
+	);
+	tlHeader.from(
+		$tail,
+		{
+			x: -200,
+			duration: 1,
+			ease: 'power1.out',
+		},
+		'-=.4',
+	);
+	tlHeader.from(
+		$ears,
+		{
+			y: 100,
+			duration: 1,
+			ease: 'power1.out',
+		},
+		'-=.4',
 	);
 };
 
