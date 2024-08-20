@@ -5,6 +5,17 @@ block vars
 	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'Index', template_name: 'index'}
 
 block content_block
+	-
+		list = [
+			{
+				name: 'telega',
+				link: 'https://t.me/catcoinofsolana'
+			},
+			{
+				name: 'x',
+				link: 'https://x.com/CatCoinofSolana'
+			},
+		]
 	section.hero
 		+picture({
 			media: 1024,
@@ -60,7 +71,7 @@ block content_block
 							img_class: 'hero__tail__img',
 							alt: 'some image',
 						})
-						a(href="#").hero__btn Join the wave!
+						a(href="https://coinmarketcap.com/currencies/catcoinofsolana/").hero__btn Join the wave!
 
 		.hero__footer_box.js-footer-start
 			+picture({
@@ -72,11 +83,11 @@ block content_block
 			.hero__footer_box_in
 				.hero__footer_title Social media
 				ul.hero__footer_social_list
-					each item in ['telega', 'x']
+					each item in list
 						li.hero__footer_social_item
 							a(href="#" alt="social icon").hero__footer_social_link
 								+icon(item, 'icon--size_mod')
 
-				.hero__footer_rights All rights reserved © 2024 – catsofsolana.com
+				.hero__footer_rights All rights reserved © 2024 – #[a(href="https://catcoinofsolana.com/") catsofsolana.com]
 
 
