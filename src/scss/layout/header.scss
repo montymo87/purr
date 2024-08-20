@@ -38,7 +38,7 @@
 }
 
 .header__logo_w {
-	@include flex_block(row, wrap, flex-start);
+	@include flex_block(row, wrap, flex-start, center, center);
 
 	@include bp($point_2, min) {
 		margin-right: auto;
@@ -74,11 +74,11 @@
 	text-shadow: 0.3rem 0.3rem #000;
 
 	@include bp($point_2, min) {
-		padding: 1rem 0 0 0.7rem;
+		padding: 0 0 0 0.7rem;
 		font-size: 2.6rem;
 	}
 	@include bp($point_3) {
-		padding: 1.2rem 0 0 2.4rem;
+		padding: 0 0 0 2.4rem;
 		font-size: 2.4rem;
 	}
 }

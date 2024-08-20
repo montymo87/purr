@@ -9,11 +9,11 @@ block content_block
 		list = [
 			{
 				name: 'telega',
-				link: 'https://t.me/catcoinofsolana'
+				link: 'https://x.com/CatCoinofSolana'
 			},
 			{
 				name: 'x',
-				link: 'https://x.com/CatCoinofSolana'
+				link: 'https://t.me/catcoinofsolana'
 			},
 		]
 	section.hero
@@ -27,7 +27,7 @@ block content_block
 		})
 		.hero__cat_img_box.js-cat-img-w
 			+picture({
-				media: 1024,
+				media: 768,
 				img: `cat.jpg`,
 				img_mob: 'cat-mob.png',
 				class: 'hero__cat_img_w js-cat-img',
@@ -85,8 +85,8 @@ block content_block
 				ul.hero__footer_social_list
 					each item in list
 						li.hero__footer_social_item
-							a(href="#" alt="social icon").hero__footer_social_link
-								+icon(item, 'icon--size_mod')
+							a(href=item.link alt="social icon").hero__footer_social_link
+								+icon(item.name, 'icon--size_mod')
 
 				.hero__footer_rights All rights reserved © 2024 – #[a(href="https://catcoinofsolana.com/") catsofsolana.com]
 
