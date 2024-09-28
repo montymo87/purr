@@ -49,93 +49,232 @@
     </header>
     <div class="wrapper">
       <div class="base">
-        <section class="hero">
-          <picture class="hero__img_w">
-            <source media="(min-width: 1024px)" srcset="images/bg-new.jpg.webp" type="image/webp">
-            <source media="(min-width: 1024px)" srcset="images/bg-new.jpg" type="image/jpeg">
-            <source media="(max-width: 1023px)" srcset="images/bg-mobile.png.webp" type="image/webp">
-            <source media="(max-width: 1023px)" srcset="images/bg-mobile.png" type="image/png"><img class="hero__img" src="images/bg-new.jpg" alt="some image" loading="lazy">
-          </picture>
-          <div class="hero__cat_img_box js-cat-img-w">
-            <picture class="hero__cat_img_w js-cat-img">
-              <source media="(min-width: 768px)" srcset="images/cat.jpg.webp" type="image/webp">
-              <source media="(min-width: 768px)" srcset="images/cat.jpg" type="image/jpeg">
-              <source media="(max-width: 767px)" srcset="images/cat-mob.png.webp" type="image/webp">
-              <source media="(max-width: 767px)" srcset="images/cat-mob.png" type="image/png"><img class="hero__cat_img" src="images/cat.jpg" alt="some image" loading="lazy">
+        <div class="race-wrapper">
+          <div class="race">
+            <picture class="bg_full__img_w">
+              <source srcset="images/full-bg.jpg.webp" type="image/webp">
+              <source srcset="images/full-bg.jpg" type="image/jpeg"><img class="bg_full__img" src="images/full-bg.jpg" alt="some image" loading="lazy">
             </picture>
-          </div>
-          <div class="hero__cloud_img_box js-cloud-img-w">
-            <picture class="hero__cloud_img_w js-cloud-img">
-              <source media="(max-width: 767px)" srcset="images/cloud.png.webp" type="image/webp">
-              <source media="(max-width: 767px)" srcset="images/cloud.png" type="image/png"><img class="hero__cloud_img js-start-cloud-img" src="images/cloud.png" alt="some image" loading="lazy">
-            </picture>
-          </div>
-          <div class="hero__cloud_img_box hero__cloud_img_box--small js-cloud-img-w">
-            <picture class="hero__cloud_img_w js-cloud-img">
-              <source media="(max-width: 767px)" srcset="images/cloud.png.webp" type="image/webp">
-              <source media="(max-width: 767px)" srcset="images/cloud.png" type="image/png"><img class="hero__cloud_img js-start-cloud-img" src="images/cloud.png" alt="some image" loading="lazy">
-            </picture>
-          </div>
-          <div class="hero__in">
-            <div class="hero__heading">
-              <h1 class="hero__title js-title-start"><span>Purr & Earn</span> <br> together!</h1>
-              <div class="hero__btn_w">
-                <div class="hero__decor_w" aria-hidden="true">
-                  <div class="hero__decor hero__decor--1">
-                    <svg class="icon icon_arr-1 icon--size_mod js-arrows-start">
-                      <use xlink:href="images/sprite/sprite.svg#arr-1"></use>
-                    </svg>
+            <section class="section hero">
+              <div class="hero__cat_img_box js-cat-img-w">
+                <picture class="hero__cat_img_w js-cat-img">
+                  <source media="(min-width: 768px)" srcset="images/cat.jpg.webp" type="image/webp">
+                  <source media="(min-width: 768px)" srcset="images/cat.jpg" type="image/jpeg">
+                  <source media="(max-width: 767px)" srcset="images/cat-mob.png.webp" type="image/webp">
+                  <source media="(max-width: 767px)" srcset="images/cat-mob.png" type="image/png"><img class="hero__cat_img" src="images/cat.jpg" alt="some image" loading="lazy">
+                </picture>
+              </div>
+              <div class="hero__cloud_img_box js-cloud-img-w">
+                <picture class="hero__cloud_img_w js-cloud-img">
+                  <source media="(max-width: 767px)" srcset="images/cloud.png.webp" type="image/webp">
+                  <source media="(max-width: 767px)" srcset="images/cloud.png" type="image/png"><img class="hero__cloud_img js-start-cloud-img" src="images/cloud.png" alt="some image" loading="lazy">
+                </picture>
+              </div>
+              <div class="hero__cloud_img_box hero__cloud_img_box--small js-cloud-img-w">
+                <picture class="hero__cloud_img_w js-cloud-img">
+                  <source media="(max-width: 767px)" srcset="images/cloud.png.webp" type="image/webp">
+                  <source media="(max-width: 767px)" srcset="images/cloud.png" type="image/png"><img class="hero__cloud_img js-start-cloud-img" src="images/cloud.png" alt="some image" loading="lazy">
+                </picture>
+              </div>
+              <div class="hero__in">
+                <div class="hero__heading">
+                  <h1 class="hero__title js-title-start"><span>Purr & Earn</span> <br> together!</h1>
+                  <div class="hero__btn_w">
+                    <div class="hero__decor_w" aria-hidden="true">
+                      <div class="hero__decor hero__decor--1">
+                        <svg class="icon icon_arr-1 icon--size_mod js-arrows-start">
+                          <use xlink:href="images/sprite/sprite.svg#arr-1"></use>
+                        </svg>
+                      </div>
+                      <div class="hero__decor hero__decor--2">
+                        <svg class="icon icon_arr-2 icon--size_mod js-arrows-start">
+                          <use xlink:href="images/sprite/sprite.svg#arr-2"></use>
+                        </svg>
+                      </div>
+                      <div class="hero__decor hero__decor--3">
+                        <svg class="icon icon_arr-3 icon--size_mod js-arrows-start">
+                          <use xlink:href="images/sprite/sprite.svg#arr-3"></use>
+                        </svg>
+                      </div>
+                      <div class="hero__decor hero__decor--4">
+                        <svg class="icon icon_arr-4 icon--size_mod js-arrows-start">
+                          <use xlink:href="images/sprite/sprite.svg#arr-4"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="hero__btn_box js-btn-start">
+                      <picture class="hero__ears_img_w js-ears-start">
+                        <source media="(max-width: 767px)" srcset="images/ears.png.webp" type="image/webp">
+                        <source media="(max-width: 767px)" srcset="images/ears.png" type="image/png"><img class="hero__ears__img" src="images/ears.png" alt="some image" loading="lazy">
+                      </picture>
+                      <picture class="hero__tail_img_w js-tail-start">
+                        <source media="(max-width: 767px)" srcset="images/tail.png.webp" type="image/webp">
+                        <source media="(max-width: 767px)" srcset="images/tail.png" type="image/png"><img class="hero__tail__img" src="images/tail.png" alt="some image" loading="lazy">
+                      </picture><a class="hero__btn" href="https://coinmarketcap.com/currencies/catcoinofsolana/">Join the wave!</a>
+                    </div>
                   </div>
-                  <div class="hero__decor hero__decor--2">
-                    <svg class="icon icon_arr-2 icon--size_mod js-arrows-start">
-                      <use xlink:href="images/sprite/sprite.svg#arr-2"></use>
-                    </svg>
-                  </div>
-                  <div class="hero__decor hero__decor--3">
-                    <svg class="icon icon_arr-3 icon--size_mod js-arrows-start">
-                      <use xlink:href="images/sprite/sprite.svg#arr-3"></use>
-                    </svg>
-                  </div>
-                  <div class="hero__decor hero__decor--4">
-                    <svg class="icon icon_arr-4 icon--size_mod js-arrows-start">
-                      <use xlink:href="images/sprite/sprite.svg#arr-4"></use>
-                    </svg>
-                  </div>
-                </div>
-                <div class="hero__btn_box js-btn-start">
-                  <picture class="hero__ears_img_w js-ears-start">
-                    <source media="(max-width: 767px)" srcset="images/ears.png.webp" type="image/webp">
-                    <source media="(max-width: 767px)" srcset="images/ears.png" type="image/png"><img class="hero__ears__img" src="images/ears.png" alt="some image" loading="lazy">
-                  </picture>
-                  <picture class="hero__tail_img_w js-tail-start">
-                    <source media="(max-width: 767px)" srcset="images/tail.png.webp" type="image/webp">
-                    <source media="(max-width: 767px)" srcset="images/tail.png" type="image/png"><img class="hero__tail__img" src="images/tail.png" alt="some image" loading="lazy">
-                  </picture><a class="hero__btn" href="https://coinmarketcap.com/currencies/catcoinofsolana/">Join the wave!</a>
                 </div>
               </div>
-            </div>
+              <div class="hero__footer_box js-footer-start">
+                <picture class="hero__footer_img_w">
+                  <source media="(max-width: 767px)" srcset="images/footer.png.webp" type="image/webp">
+                  <source media="(max-width: 767px)" srcset="images/footer.png" type="image/png"><img class="hero__footer_img" src="images/footer.png" alt="some image" loading="lazy">
+                </picture>
+                <div class="hero__footer_box_in">
+                  <div class="hero__footer_title">Social media</div>
+                  <ul class="hero__footer_social_list">
+                    <li class="hero__footer_social_item"><a class="hero__footer_social_link" href="https://x.com/CatCoinofSolana" alt="social icon">
+                        <svg class="icon icon_telega icon--size_mod">
+                          <use xlink:href="images/sprite/sprite.svg#telega"></use>
+                        </svg></a></li>
+                    <li class="hero__footer_social_item"><a class="hero__footer_social_link" href="https://t.me/catcoinofsolana" alt="social icon">
+                        <svg class="icon icon_x icon--size_mod">
+                          <use xlink:href="images/sprite/sprite.svg#x"></use>
+                        </svg></a></li>
+                  </ul>
+                  <div class="hero__footer_rights">All rights reserved © 2024 – <a href="https://catcoinofsolana.com/">catsofsolana.com</a></div>
+                </div>
+              </div>
+            </section>
+            <section class="section roadmap">
+              <div class="section_in roadmap__in">
+                <div class="roadmap__col">
+                  <div class="roadmap__title_w js-fade-el">
+                    <div class="roadmap__title_in">
+                      <picture class="roadmap__title_img_w">
+                        <source media="(max-width: 767px)" srcset="images/roadmap/roadmap.png.webp" type="image/webp">
+                        <source media="(max-width: 767px)" srcset="images/roadmap/roadmap.png" type="image/png"><img class="roadmap__title_img" src="images/roadmap/roadmap.png" alt="some image" loading="lazy">
+                      </picture>
+                      <h2 class="roadmap__title_title js-opacity-el">Roadmap</h2>
+                    </div>
+                  </div>
+                  <div class="roadmap__born_w">
+                    <div class="roadmap__born_in js-fade-el">
+                      <picture class="roadmap__born_img_w">
+                        <source media="(max-width: 767px)" srcset="images/roadmap/born.png.webp" type="image/webp">
+                        <source media="(max-width: 767px)" srcset="images/roadmap/born.png" type="image/png"><img class="roadmap__born_img" src="images/roadmap/born.png" alt="some image" loading="lazy">
+                      </picture>
+                      <div class="roadmap__born_title js-opacity-el">Born</div>
+                      <ul class="roadmap__born_list">
+                        <li class="roadmap__born_item js-opacity-el">
+                          <div class="roadmap__born_icon">
+                            <svg class="icon icon_paw icon--size_mod">
+                              <use xlink:href="images/sprite/sprite.svg#paw"></use>
+                            </svg>
+                          </div>
+                          <div class="roadmap__born_text">Launch of the token,</div>
+                        </li>
+                        <li class="roadmap__born_item js-opacity-el">
+                          <div class="roadmap__born_icon">
+                            <svg class="icon icon_paw icon--size_mod">
+                              <use xlink:href="images/sprite/sprite.svg#paw"></use>
+                            </svg>
+                          </div>
+                          <div class="roadmap__born_text">CMC listing</div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="roadmap__baby_w js-fade-el">
+                    <picture class="roadmap__baby_img_w">
+                      <source media="(max-width: 767px)" srcset="images/roadmap/baby.jpg.webp" type="image/webp">
+                      <source media="(max-width: 767px)" srcset="images/roadmap/baby.jpg" type="image/jpeg"><img class="roadmap__baby_img" src="images/roadmap/baby.jpg" alt="some image" loading="lazy">
+                    </picture>
+                  </div>
+                </div>
+                <div class="roadmap__col">
+                  <div class="roadmap__cat_w js-fade-el">
+                    <picture class="roadmap__cat_img_w">
+                      <source media="(max-width: 767px)" srcset="images/roadmap/cat.png.webp" type="image/webp">
+                      <source media="(max-width: 767px)" srcset="images/roadmap/cat.png" type="image/png"><img class="roadmap__cat_img" src="images/roadmap/cat.png" alt="some image" loading="lazy">
+                    </picture>
+                  </div>
+                  <div class="roadmap__grow_w js-fade-el">
+                    <div class="roadmap__grow_in">
+                      <picture class="roadmap__grow_img_w">
+                        <source media="(max-width: 767px)" srcset="images/roadmap/grow.png.webp" type="image/webp">
+                        <source media="(max-width: 767px)" srcset="images/roadmap/grow.png" type="image/png"><img class="roadmap__grow_img" src="images/roadmap/grow.png" alt="some image" loading="lazy">
+                      </picture>
+                      <div class="roadmap__born_title js-opacity-el">Growth</div>
+                      <ul class="roadmap__born_list">
+                        <li class="roadmap__born_item js-opacity-el">
+                          <div class="roadmap__born_icon">
+                            <svg class="icon icon_paw icon--size_mod">
+                              <use xlink:href="images/sprite/sprite.svg#paw"></use>
+                            </svg>
+                          </div>
+                          <div class="roadmap__born_text">Community development &amp; marketing:</div>
+                        </li>
+                        <li class="roadmap__born_item js-opacity-el">
+                          <div class="roadmap__born_icon">
+                            <svg class="icon icon_paw icon--size_mod">
+                              <use xlink:href="images/sprite/sprite.svg#paw"></use>
+                            </svg>
+                          </div>
+                          <div class="roadmap__born_text">Twitter + Telegram, </div>
+                        </li>
+                        <li class="roadmap__born_item js-opacity-el">
+                          <div class="roadmap__born_icon">
+                            <svg class="icon icon_paw icon--size_mod">
+                              <use xlink:href="images/sprite/sprite.svg#paw"></use>
+                            </svg>
+                          </div>
+                          <div class="roadmap__born_text">KOLs + partnerships</div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="roadmap__col">
+                  <div class="roadmap__nft_w js-fade-el">
+                    <div class="roadmap__nft_in">
+                      <picture class="roadmap__grow_img_w">
+                        <source media="(max-width: 767px)" srcset="images/roadmap/nft.png.webp" type="image/webp">
+                        <source media="(max-width: 767px)" srcset="images/roadmap/nft.png" type="image/png"><img class="roadmap__grow_img" src="images/roadmap/nft.png" alt="some image" loading="lazy">
+                      </picture>
+                      <div class="roadmap__born_title js-opacity-el">NFT</div>
+                      <ul class="roadmap__born_list">
+                        <li class="roadmap__born_item js-opacity-el">
+                          <div class="roadmap__born_icon">
+                            <svg class="icon icon_paw icon--size_mod">
+                              <use xlink:href="images/sprite/sprite.svg#paw"></use>
+                            </svg>
+                          </div>
+                          <div class="roadmap__born_text">NFT collection development for the media exposure + marketplace, integration with external exchanges and the best MMs!</div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="roadmap__space_w js-fade-el">
+                    <picture class="roadmap__space_img_w">
+                      <source media="(max-width: 767px)" srcset="images/roadmap/space.png.webp" type="image/webp">
+                      <source media="(max-width: 767px)" srcset="images/roadmap/space.png" type="image/png"><img class="roadmap__space_img" src="images/roadmap/space.png" alt="some image" loading="lazy">
+                    </picture>
+                  </div>
+                  <div class="roadmap__meow_w js-fade-el">
+                    <div class="roadmap__meow_in">
+                      <picture class="roadmap__grow_img_w">
+                        <source media="(max-width: 767px)" srcset="images/roadmap/meow.png.webp" type="image/webp">
+                        <source media="(max-width: 767px)" srcset="images/roadmap/meow.png" type="image/png"><img class="roadmap__grow_img" src="images/roadmap/meow.png" alt="some image" loading="lazy">
+                      </picture>
+                      <div class="roadmap__born_title js-opacity-el">Meow!</div>
+                      <ul class="roadmap__born_list">
+                        <li class="roadmap__born_item js-opacity-el">
+                          <div class="roadmap__born_icon">
+                            <svg class="icon icon_paw icon--size_mod">
+                              <use xlink:href="images/sprite/sprite.svg#paw"></use>
+                            </svg>
+                          </div>
+                          <div class="roadmap__born_text">Expansion of the ecosystem through strategic partnerships, introduction of cross-chain capabilities and flying to the Moon!</div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
           </div>
-          <div class="hero__footer_box js-footer-start">
-            <picture class="hero__footer_img_w">
-              <source media="(max-width: 767px)" srcset="images/footer.png.webp" type="image/webp">
-              <source media="(max-width: 767px)" srcset="images/footer.png" type="image/png"><img class="hero__footer_img" src="images/footer.png" alt="some image" loading="lazy">
-            </picture>
-            <div class="hero__footer_box_in">
-              <div class="hero__footer_title">Social media</div>
-              <ul class="hero__footer_social_list">
-                <li class="hero__footer_social_item"><a class="hero__footer_social_link" href="https://x.com/CatCoinofSolana" alt="social icon">
-                    <svg class="icon icon_telega icon--size_mod">
-                      <use xlink:href="images/sprite/sprite.svg#telega"></use>
-                    </svg></a></li>
-                <li class="hero__footer_social_item"><a class="hero__footer_social_link" href="https://t.me/catcoinofsolana" alt="social icon">
-                    <svg class="icon icon_x icon--size_mod">
-                      <use xlink:href="images/sprite/sprite.svg#x"></use>
-                    </svg></a></li>
-              </ul>
-              <div class="hero__footer_rights">All rights reserved © 2024 – <a href="https://catcoinofsolana.com/">catsofsolana.com</a></div>
-            </div>
-          </div>
-        </section>
+        </div>
       </div>
     </div>
   <script defer src="js/app.js"></script></body>
