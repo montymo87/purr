@@ -1,0 +1,515 @@
+.hero {
+	position: relative;
+	flex: none;
+	z-index: 3;
+
+	// width: 100%;
+	font-size: 1rem;
+	// width: 108rem;
+	// overflow: hidden;
+	width: 100vw;
+
+	@include bp($point_2, min) {
+		height: var(--full-screen);
+	}
+	@include bp($point_3) {
+		padding-top: var(--height-header);
+		min-height: 144rem;
+	}
+}
+
+.hero__img_w {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	width: 100vw;
+
+	@include bp($point_2, min) {
+		height: var(--full-screen);
+	}
+	@include bp($point_3) {
+		height: 100%;
+	}
+
+	img {
+		display: block;
+		// width: 100%;
+		width: 100vw;
+		height: 100%;
+
+		@include bp($point_2, min) {
+			object-fit: fill;
+			aspect-ratio: 1920 / 1080;
+		}
+		@include bp($point_3) {
+			object-fit: fill;
+			object-position: top;
+		}
+	}
+}
+
+.hero__cat_img_box {
+	z-index: 2;
+	overflow: hidden;
+
+	@include bp($point_2, min) {
+		position: absolute;
+		bottom: -0.5rem;
+		right: 6rem;
+		width: 57vw;
+		height: 86vh;
+		clip-path: polygon(26.6% 0.5%, 89.8% 8.9%, 99.2% 100%, 2.6% 100%);
+	}
+	@include bp($point_3) {
+		position: relative;
+		bottom: -0.9rem;
+		right: 0;
+		width: 100vw;
+		height: 34rem;
+		clip-path: polygon(0% 2%, 47% 13%, 100% 3%, 100% 91%, 46% 85.5%, 0 98%);
+	}
+}
+
+.hero__cat_img_w {
+	display: block;
+	width: 100%;
+	height: 100%;
+
+	img {
+		transform: scale(1.02);
+		@include bp($point_2, min) {
+			@include cover_img;
+		}
+		@include bp($point_3, $point_4) {
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: top;
+		}
+
+		@include bp($point_4 - 1) {
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}
+
+.hero__cloud_img_box {
+	position: absolute;
+	transition: transform ease 0.3s;
+	z-index: 1;
+
+	&.hero__cloud_img_box--small {
+		right: auto;
+
+		@include bp($point_2, min) {
+			left: -8.8rem;
+			bottom: -15rem;
+			width: 47.1rem;
+			height: 31.1rem;
+
+			transform: rotateY(180deg);
+		}
+		@include bp($point_3) {
+			left: -17rem;
+			bottom: -5rem;
+			width: 27.7rem;
+			height: 18.3rem;
+			transform: rotateY(180deg) rotatez(-30deg);
+		}
+	}
+
+	@include bp($point_2, min) {
+		bottom: -29rem;
+		right: -39.8rem;
+		z-index: 10;
+
+		width: 86.8rem;
+		height: 57.4rem;
+	}
+	@include bp($point_3) {
+		bottom: -9rem;
+		right: -15rem;
+		z-index: 10;
+		width: 25.4rem;
+		height: 16.8rem;
+	}
+}
+
+.hero__cloud_img_w {
+	position: relative;
+	z-index: 1;
+	display: block;
+	width: 100%;
+	height: 100%;
+	will-change: transform;
+
+	img {
+		@include contain_img;
+	}
+}
+
+.hero__in {
+	position: relative;
+	z-index: 3;
+	max-width: $page_width;
+	width: 100%;
+
+	@include bp($point_2, min) {
+		margin: 32.3vh auto 0;
+	}
+	@include bp($point_3) {
+		margin: 3.3rem auto 0;
+	}
+}
+
+.hero__heading {
+	@include flex_block(column, nowrap, flex-start);
+}
+
+.hero__title {
+	line-height: 1.05;
+	color: $white;
+	text-shadow: 0.6rem 0.6rem $black;
+	font-weight: 400;
+
+	span {
+		font-family: $font_2;
+
+		@include bp($point_2, min) {
+			font-size: 12.2rem;
+			letter-spacing: 0.015em;
+		}
+		@include bp($point_3) {
+			font-size: 8rem;
+		}
+	}
+
+	&:not(:last-child) {
+		@include bp($point_2, min) {
+			margin-bottom: 13rem;
+		}
+		@include bp($point_3) {
+			margin-bottom: 6.4rem;
+		}
+	}
+
+	@include bp($point_2, min) {
+		font-size: 9.4rem;
+		margin-left: 1rem;
+	}
+	@include bp($point_3) {
+		margin-left: auto;
+		margin-right: auto;
+		letter-spacing: -0.02em;
+		font-size: 6rem;
+		padding: 0 1.3rem;
+	}
+}
+
+.hero__footer_box {
+	position: absolute;
+	bottom: 0;
+
+	z-index: 2;
+	min-height: 28.9rem;
+
+	transform-origin: 50% 100%;
+
+	@include bp($point_2, min) {
+		padding: 10.2rem 5rem 1rem 2rem;
+		width: 42.8rem;
+		left: 35.5%;
+	}
+	@include bp($point_3) {
+		padding: 9.8rem 2rem 1rem;
+		width: 100%;
+	}
+}
+
+.hero__footer_box_in {
+	position: relative;
+	z-index: 1;
+}
+
+.hero__footer_img_w {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+
+	img {
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: fill;
+	}
+
+	@include bp($point_3) {
+		display: none;
+	}
+}
+
+.hero__footer_title {
+	text-align: center;
+	font-family: $font_2;
+	font-size: 4rem;
+	color: $white;
+	text-shadow: 2px 2px $black;
+
+	&:not(:last-child) {
+		margin-bottom: 2.2rem;
+	}
+}
+
+.hero__footer_social_list {
+	@include flex_block(row, wrap, center, center, center);
+	gap: 2.2rem;
+
+	&:not(:last-child) {
+		margin-bottom: 3.2rem;
+	}
+}
+
+.hero__footer_social_link {
+	display: block;
+	width: 4.2rem;
+	height: 4.2rem;
+	color: $black;
+	transition: color ease 0.3s;
+
+	&:hover {
+		color: rgba($red, 1);
+	}
+}
+
+.hero__footer_rights {
+	color: $black;
+	font-size: 1.6rem;
+	font-family: $font_2;
+	text-align: center;
+	letter-spacing: -0.06em;
+	transition: ease color 0.3s;
+
+	a {
+		color: $black;
+
+		&:hover {
+			text-decoration: none;
+			color: $red;
+		}
+	}
+}
+
+.hero__btn_w {
+	position: relative;
+	transform-origin: 100% 100%;
+
+	@include bp($point_2, min) {
+		height: 13rem;
+		width: 35.6rem;
+	}
+	@include bp($point_3) {
+		height: 11.4rem;
+		width: 30.4rem;
+		margin: 0 auto;
+	}
+}
+
+.hero__btn_box {
+	will-change: transform;
+
+	width: 100%;
+	height: 100%;
+}
+
+.hero__decor {
+	position: absolute;
+	z-index: 5;
+
+	&.hero__decor--1 {
+		animation: 4s linear 0s infinite alternate arrow-1;
+
+		@include bp($point_2, min) {
+			width: 8.6rem;
+			height: 8.5rem;
+
+			top: -9rem;
+			left: -5rem;
+		}
+		@include bp($point_3) {
+			width: 6rem;
+			height: 6rem;
+			top: -5rem;
+			left: -2.5rem;
+		}
+	}
+
+	&.hero__decor--2 {
+		animation: 6s linear 0s infinite alternate arrow-2;
+
+		@include bp($point_2, min) {
+			width: 6.3rem;
+			height: 6.2rem;
+			top: -4rem;
+			left: 37rem;
+		}
+		@include bp($point_3) {
+			width: 4.8rem;
+			height: 5.4rem;
+			top: -5.4rem;
+			left: 28.4rem;
+		}
+	}
+
+	&.hero__decor--3 {
+		animation: 5s linear 0s infinite alternate arrow-3;
+
+		@include bp($point_2, min) {
+			width: 7.9rem;
+			height: 7.4rem;
+			top: 13.5rem;
+			left: 3rem;
+		}
+		@include bp($point_3) {
+			width: 6.9rem;
+			height: 6.4rem;
+			top: 11.5rem;
+			left: 2rem;
+		}
+	}
+
+	&.hero__decor--4 {
+		animation: 3s linear 0s infinite alternate arrow;
+
+		@include bp($point_2, min) {
+			width: 9.4rem;
+			height: 8.1rem;
+			top: 15rem;
+			left: 28rem;
+		}
+		@include bp($point_3) {
+			width: 9.4rem;
+			height: 7.1rem;
+			top: 12.6rem;
+			left: 22rem;
+		}
+	}
+}
+
+@keyframes arrow {
+	from {
+		transform: rotateY(0deg) rotateZ(0);
+	}
+	to {
+		transform: rotateY(20deg) rotateZ(5deg);
+	}
+}
+
+@keyframes arrow-1 {
+	from {
+		transform: rotateY(0deg) translate(-1rem, -1rem);
+	}
+	to {
+		transform: rotateY(-30deg) translate(0, 0);
+	}
+}
+@keyframes arrow-2 {
+	from {
+		transform: rotateY(0deg) translate(1rem, -1rem);
+	}
+	to {
+		transform: rotateY(30deg) translate(0, 0);
+	}
+}
+@keyframes arrow-3 {
+	from {
+		transform: rotateY(30deg) translate(-2rem, 1rem);
+	}
+	to {
+		transform: rotateY(0deg) translate(0, 0);
+	}
+}
+
+.hero__ears_img_w {
+	position: absolute;
+	top: -3rem;
+
+	z-index: 1;
+	display: block;
+
+	height: 3.7rem;
+
+	img {
+		@include contain_img;
+	}
+
+	@include bp($point_2, min) {
+		left: 6rem;
+		width: 8.5rem;
+	}
+	@include bp($point_3) {
+		left: 3.4rem;
+		width: 7.4rem;
+	}
+}
+
+.hero__tail_img_w {
+	position: absolute;
+	z-index: 1;
+
+	img {
+		@include contain_img;
+	}
+
+	@include bp($point_2, min) {
+		top: 4.7rem;
+		right: -4.6rem;
+		width: 9rem;
+		height: 7.4rem;
+	}
+	@include bp($point_3) {
+		top: 4.2rem;
+		right: -4.7rem;
+		width: 11rem;
+		height: 6.6rem;
+	}
+}
+
+.hero__btn {
+	@include flex_block(row, wrap, center, center, center);
+	position: relative;
+	z-index: 2;
+	height: 100%;
+	width: 100%;
+	line-height: 1;
+	font-size: 2.8rem;
+	color: $black_2;
+	border-radius: 50rem;
+	overflow: hidden;
+	box-shadow: inset 0px 0px 0px 6px $white;
+
+	background: rgb(255, 195, 43);
+	background: linear-gradient(-138deg, rgba(255, 195, 43, 1) 0%, rgba(248, 160, 28, 1) 100%);
+	background-position: right;
+	background-size: 300%;
+	transition: background-position ease 0.4s;
+
+	&:hover {
+		background-position: left;
+		text-decoration: none;
+	}
+
+	@include bp($point_2, min) {
+		border: 1.2rem solid $black_2;
+	}
+	@include bp($point_3) {
+		left: -0.6rem;
+		border: 1rem solid $black_2;
+	}
+}

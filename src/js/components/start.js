@@ -88,7 +88,7 @@ const animation = () => {
 	tlHeader.from(
 		$tail,
 		{
-			x: -200,
+			x: -150,
 			duration: 1,
 			ease: 'power1.out',
 		},
@@ -97,7 +97,7 @@ const animation = () => {
 	tlHeader.from(
 		$ears,
 		{
-			y: 100,
+			y: 50,
 			duration: 1,
 			ease: 'power1.out',
 		},

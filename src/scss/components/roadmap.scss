@@ -1,0 +1,325 @@
+.roadmap {
+	width: 100vw;
+}
+
+.roadmap__in {
+	@include flex_block(row, nowrap, flex-start);
+}
+
+.roadmap__col {
+	flex: none;
+}
+
+//
+// title-block
+//
+
+.roadmap__title_w {
+	--block-width-title: 38.8vw;
+	--block-height-title: 24vh;
+	--block-polygon-title: polygon(16% 0%, 97% 0%, 98% 92%, 9.5% 99%);
+
+	// position: absolute;
+	// top: 0;
+	// left: 7rem;
+	// z-index: 1;
+
+	height: var(--block-height-title);
+	width: var(--block-width-title);
+
+	clip-path: var(--block-polygon-title);
+}
+
+.roadmap__title_in {
+	width: 100%;
+	height: 100%;
+	padding: 7vh 2vw 0 5vw;
+}
+
+.roadmap__title_img_w {
+	position: absolute;
+	top: -26%;
+	left: -2%;
+	display: block;
+	width: 71.6rem;
+	height: 77.4rem;
+	transform: rotateX(-151deg) rotate(14deg);
+
+	img {
+		@include contain_img;
+	}
+}
+
+.roadmap__title_title {
+	position: relative;
+	z-index: 1;
+	text-align: center;
+	color: $white;
+	text-transform: uppercase;
+	font-weight: 400;
+	font-size: 9.2rem;
+	letter-spacing: -0.025em;
+	text-shadow: 0.6rem 0.8rem #000;
+}
+
+//
+// title-block end
+//
+
+//
+// born-block
+//
+
+.roadmap__born_w {
+	--block-width-born: 40.7vw;
+	--block-height-born: 36vh;
+	--block-polygon-born: polygon(8.5% 8%, 94% 4%, 95% 45.5%, 1.5% 89%);
+	position: relative;
+
+	height: var(--block-height-born);
+	width: var(--block-width-born);
+
+	clip-path: var(--block-polygon-born);
+}
+
+.roadmap__born_in {
+	padding: 6.5vh 2rem 2rem 7vw;
+	height: 100%;
+}
+
+.roadmap__born_img_w {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+
+	img {
+		@include cover_img;
+	}
+}
+
+.roadmap__born_title {
+	position: relative;
+	z-index: 1;
+	padding-left: 2vw;
+	margin-bottom: 2rem;
+
+	line-height: 1;
+	color: $white;
+	letter-spacing: -0.025em;
+	text-transform: uppercase;
+	font-weight: 400;
+	font-size: 5.8rem;
+	text-shadow: 0.6rem 0.8rem #000;
+}
+
+.roadmap__born_list {
+	max-width: 18vw;
+	width: 100%;
+
+	.roadmap__nft_w & {
+		max-width: 34vw;
+	}
+	.roadmap__meow_w & {
+		max-width: 31vw;
+	}
+}
+
+.roadmap__born_item {
+	position: relative;
+	padding-left: 4rem;
+
+	&:not(:last-child) {
+		margin-bottom: 0.4rem;
+	}
+}
+
+.roadmap__born_icon {
+	position: absolute;
+	top: 0.6rem;
+	left: 0;
+
+	width: 2rem;
+	height: 2rem;
+}
+
+.roadmap__born_text {
+	font-family: $font_2;
+	font-size: 3.2rem;
+	line-height: 1.2;
+	letter-spacing: -0.025em;
+}
+
+//
+// born-block end
+//
+
+//
+// baby-block
+//
+
+.roadmap__baby_w {
+	--block-width-born: 44.7vw;
+	--block-height-born: 64vh;
+	clip-path: polygon(10% 26.8%, 96% 2%, 100% 100%, 0% 100%);
+	position: relative;
+	top: -17.5vh;
+	left: -4.3vw;
+	height: var(--block-height-born);
+	width: var(--block-width-born);
+}
+
+.roadmap__baby_img_w {
+	display: block;
+	width: 100%;
+	height: 100%;
+
+	img {
+		@include cover_img;
+	}
+}
+
+//
+// baby-block end
+//
+
+//
+// cat-block
+//
+
+.roadmap__cat_w {
+	--block-width-born: 30vw;
+	--block-height-born: 59vh;
+	clip-path: polygon(0% 0%, 80% 0%, 99% 97%, 4% 87%);
+	position: relative;
+	top: 0;
+	left: -5.3vw;
+	height: var(--block-height-born);
+	width: var(--block-width-born);
+}
+
+.roadmap__cat_img_w {
+	display: block;
+	width: 100%;
+	height: 100%;
+
+	img {
+		@include cover_img;
+	}
+}
+
+//
+// baby-block end
+//
+
+//
+// grow-block
+//
+
+.roadmap__grow_w {
+	--block-width-born: 35.2vw;
+	--block-height-born: 59vh;
+	clip-path: polygon(1% 1.5%, 82% 11%, 97% 98%, 5% 87%);
+	position: relative;
+	top: -5vh;
+	left: -4.3vw;
+	height: var(--block-height-born);
+	width: var(--block-width-born);
+
+	color: $white;
+}
+
+.roadmap__grow_in {
+	padding: 9vh 2rem 2rem 6vw;
+}
+
+.roadmap__grow_img_w {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+
+	img {
+		@include cover_img;
+	}
+}
+//
+// grow-block end
+//
+
+//
+// nft-block
+//
+
+.roadmap__nft_w {
+	--block-width-born: 46.6vw;
+	--block-height-born: 31vh;
+	clip-path: polygon(0% 0%, 97.6% 0%, 99.8% 97.3%, 5% 83%);
+	position: relative;
+	top: 0;
+	left: -14.7vw;
+	height: var(--block-height-born);
+	width: var(--block-width-born);
+
+	color: $white;
+}
+
+.roadmap__nft_in {
+	padding: 4vh 2rem 2rem 6vw;
+}
+
+//
+// nft-block end
+//
+
+//
+// space-block
+//
+
+.roadmap__space_w {
+	--block-width-born: 47vw;
+	--block-height-born: 35vh;
+	clip-path: polygon(0.5% 0%, 94% 12%, 96.2% 99.6%, 7% 82%);
+	position: relative;
+	top: -2vh;
+	left: -12.3vw;
+	height: var(--block-height-born);
+	width: var(--block-width-born);
+}
+
+.roadmap__space_img_w {
+	display: block;
+	width: 100%;
+	height: 100%;
+
+	img {
+		@include cover_img;
+	}
+}
+
+//
+// nft-block end
+//
+
+//
+// meow-block
+//
+
+.roadmap__meow_w {
+	--block-width-born: 42vw;
+	--block-height-born: 40vh;
+	clip-path: polygon(1.2% 1%, 100% 16.4%, 100% 100%, 11% 100%);
+	position: relative;
+	top: -5.6vh;
+	left: -9.3vw;
+	height: var(--block-height-born);
+	width: var(--block-width-born);
+}
+
+.roadmap__meow_in {
+	padding: 6.7vh 2rem 2rem 8vw;
+}
