@@ -41,42 +41,18 @@
 	position: relative;
 	// overflow-x: scroll;
 	width: max-content;
-
-	// section {
-	// 	@include flex_block(row, wrap, center, center, center);
-	// 	height: 100vh;
-	// 	width: 100vw;
-
-	// 	&:nth-child(1) {
-	// 		background: red;
-	// 	}
-	// 	&:nth-child(1) {
-	// 		background: red;
-	// 	}
-	// 	&:nth-child(2) {
-	// 		background: rgb(0, 255, 34);
-	// 	}
-	// 	&:nth-child(3) {
-	// 		background: rgb(0, 8, 255);
-	// 	}
-	// 	&:nth-child(4) {
-	// 		background: rgb(255, 0, 200);
-	// 	}
-	// 	&:nth-child(5) {
-	// 		background: rgb(255, 225, 0);
-	// 	}
-	// }
 }
 
 .bg_full__img_w {
 	position: fixed;
 	top: 0;
-	left: 7.5rem;
+	left: 0;
+	// left: 7.5rem;
 	z-index: 1;
-	right: -15rem;
-	margin-left: -10rem;
+	// right: -15rem;
+	// margin-left: -10rem;
 	display: block;
-	width: 600.989vw;
+	width: 601.9vw;
 	// width: 100%;
 	// background-color: #1e1e1e;
 

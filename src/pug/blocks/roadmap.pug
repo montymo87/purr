@@ -5,8 +5,8 @@
 
 section.section.roadmap
 	.section_in.roadmap__in
-		.roadmap__col
-			.roadmap__title_w.js-fade-el
+		.roadmap__block
+			.roadmap__title.js-fade-el
 				.roadmap__title_in
 					+picture({
 						img: `roadmap/roadmap.png`,
@@ -16,32 +16,8 @@ section.section.roadmap
 					})
 					h2.roadmap__title_title.js-opacity-el Roadmap
 
-			.roadmap__born_w
-				.roadmap__born_in.js-fade-el
-					+picture({
-						img: `roadmap/born.png`,
-						class: 'roadmap__born_img_w',
-						img_class: 'roadmap__born_img',
-						alt: 'some image',
-					})
-					.roadmap__born_title.js-opacity-el Born
-					ul.roadmap__born_list
-						each item in born
-							li.roadmap__born_item.js-opacity-el
-								.roadmap__born_icon
-									+icon('paw', 'icon--size_mod')
-								.roadmap__born_text=item
-
-			.roadmap__baby_w.js-fade-el
-				+picture({
-					img: `roadmap/baby.jpg`,
-					class: 'roadmap__baby_img_w',
-					img_class: 'roadmap__baby_img',
-					alt: 'some image',
-				})
-
-		.roadmap__col
-			.roadmap__cat_w.js-fade-el
+		.roadmap__block
+			.roadmap__cat.js-fade-el
 				+picture({
 					img: `roadmap/cat.png`,
 					class: 'roadmap__cat_img_w',
@@ -49,25 +25,8 @@ section.section.roadmap
 					alt: 'some image',
 				})
 
-			.roadmap__grow_w.js-fade-el
-				.roadmap__grow_in
-					+picture({
-						img: `roadmap/grow.png`,
-						class: 'roadmap__grow_img_w',
-						img_class: 'roadmap__grow_img',
-						alt: 'some image',
-					})
-					.roadmap__born_title.js-opacity-el Growth
-					ul.roadmap__born_list
-						each item in grow
-							li.roadmap__born_item.js-opacity-el
-								.roadmap__born_icon
-									+icon('paw', 'icon--size_mod')
-								.roadmap__born_text=item
-
-		.roadmap__col
-
-			.roadmap__nft_w.js-fade-el
+		.roadmap__block
+			.roadmap__nft.js-fade-el
 				.roadmap__nft_in
 					+picture({
 						img: `roadmap/nft.png`,
@@ -83,7 +42,25 @@ section.section.roadmap
 									+icon('paw', 'icon--size_mod')
 								.roadmap__born_text=item
 
-			.roadmap__space_w.js-fade-el
+		.roadmap__block
+			.roadmap__born.js-fade-el
+				.roadmap__born_in
+					+picture({
+						img: `roadmap/born.png`,
+						class: 'roadmap__born_img_w',
+						img_class: 'roadmap__born_img',
+						alt: 'some image',
+					})
+					.roadmap__born_title.js-opacity-el Born
+					ul.roadmap__born_list
+						each item in born
+							li.roadmap__born_item.js-opacity-el
+								.roadmap__born_icon
+									+icon('paw', 'icon--size_mod')
+								.roadmap__born_text=item
+
+		.roadmap__block
+			.roadmap__space.js-fade-el
 				+picture({
 					img: `roadmap/space.png`,
 					class: 'roadmap__space_img_w',
@@ -91,7 +68,34 @@ section.section.roadmap
 					alt: 'some image',
 				})
 
-			.roadmap__meow_w.js-fade-el
+		.roadmap__block
+			.roadmap__baby.js-fade-el
+				+picture({
+					img: `roadmap/baby.jpg`,
+					class: 'roadmap__baby_img_w',
+					img_class: 'roadmap__baby_img',
+					alt: 'some image',
+				})
+
+		.roadmap__block
+			.roadmap__grow.js-fade-el
+				.roadmap__grow_in
+					+picture({
+						img: `roadmap/grow.png`,
+						class: 'roadmap__grow_img_w',
+						img_class: 'roadmap__grow_img',
+						alt: 'some image',
+					})
+					.roadmap__born_title.js-opacity-el Growth
+					ul.roadmap__born_list
+						each item in grow
+							li.roadmap__born_item.js-opacity-el
+								.roadmap__born_icon
+									+icon('paw', 'icon--size_mod')
+								.roadmap__born_text=item
+
+		.roadmap__block
+			.roadmap__meow.js-fade-el
 				.roadmap__meow_in
 					+picture({
 						img: `roadmap/meow.png`,
