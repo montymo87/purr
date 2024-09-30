@@ -73,12 +73,10 @@
 .roadmap__born_w {
 	--block-width-born: 40.7vw;
 	--block-height-born: 36vh;
-	--block-polygon-born: polygon(8.5% 8%, 94% 4%, 95% 45.5%, 1.5% 89%);
+	--block-polygon-born: polygon(8.2% 8%, 94% 4%, 95.5% 68.9%, 1.5% 90%);
 	position: relative;
-
 	height: var(--block-height-born);
 	width: var(--block-width-born);
-
 	clip-path: var(--block-polygon-born);
 }
 
@@ -162,10 +160,10 @@
 
 .roadmap__baby_w {
 	--block-width-born: 44.7vw;
-	--block-height-born: 64vh;
-	clip-path: polygon(10% 26.8%, 96% 2%, 100% 100%, 0% 100%);
+	--block-height-born: 49vh;
+	clip-path: polygon(10% 16.8%, 97% 1%, 100% 100%, 1% 100%);
 	position: relative;
-	top: -17.5vh;
+	top: -8.5vh;
 	left: -4.3vw;
 	height: var(--block-height-born);
 	width: var(--block-width-born);

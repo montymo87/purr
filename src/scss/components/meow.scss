@@ -1,0 +1,293 @@
+.meow {
+	width: 100vw;
+}
+
+.meow__in {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.meow__block {
+	position: relative;
+	&:nth-child(1) {
+		grid-column: 1 / span 3;
+	}
+	&:nth-child(2) {
+		grid-row: 2 / span 2;
+	}
+	&:nth-child(3) {
+		grid-row: 2 / span 2;
+	}
+	&:nth-child(6) {
+		grid-column: 1 / span 3;
+	}
+}
+
+.meow__img_w {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+
+	img {
+		@include cover_img;
+	}
+}
+
+.meow__info_w {
+	position: relative;
+	z-index: 1;
+}
+
+//
+// block start
+//
+
+.meow__title_w {
+	position: relative;
+	left: 11vw;
+	height: 28vh;
+	width: 81vw;
+	clip-path: polygon(2.1% 0%, 98.5% 0%, 86.1% 54%, 29.7% 88.5%);
+}
+
+.meow__title_in {
+	padding: 4.5vh 0 2rem 0;
+	height: 100%;
+
+	text-align: center;
+}
+
+.meow__title_title {
+	line-height: 1;
+	color: $white;
+	letter-spacing: -0.025em;
+	text-transform: uppercase;
+	font-weight: 400;
+	font-size: 9.2rem;
+	text-shadow: 0.6rem 0.8rem #000;
+}
+
+//
+// block end
+//
+
+.meow__tax_w {
+	position: absolute;
+	left: 12vw;
+	top: -24.7vh;
+	height: 59vh;
+	width: 23vw;
+	clip-path: polygon(2.5% 0%, 95.5% 41%, 75% 98%, 10% 92.5%);
+}
+
+.meow__tax_in {
+	padding: 31vh 0 2rem 0;
+	height: 100%;
+
+	text-align: center;
+}
+
+.meow__tax_num {
+	line-height: 1;
+	color: $white;
+	letter-spacing: -0.025em;
+	text-transform: uppercase;
+	font-weight: 400;
+	font-size: 7rem;
+	text-shadow: 0.6rem 0.8rem #000;
+
+	margin-bottom: 2.1rem;
+}
+
+.meow__tax_title {
+	font-family: $font_2;
+	font-size: 4rem;
+	color: $black;
+}
+
+//
+// block end
+//
+//
+// block end
+//
+
+.meow__audit_w {
+	position: absolute;
+	left: -3vw;
+	top: -3.7vh;
+	height: 43vh;
+	width: 28vw;
+	clip-path: polygon(19% 8.5%, 72% 1%, 94% 96.5%, 2% 86%);
+}
+
+.meow__audit_in {
+	padding: 2.5vh 0 2rem 0;
+	height: 100%;
+
+	text-align: center;
+}
+
+.meow__audit_img_w {
+	display: block;
+	width: 11.5vw;
+	height: 19vh;
+
+	margin: 0 auto 2rem;
+
+	img {
+		@include contain_img;
+	}
+}
+
+.meow__audit_num {
+	line-height: 1;
+	color: $white;
+	letter-spacing: -0.025em;
+	text-transform: uppercase;
+	font-weight: 400;
+	font-size: 7rem;
+	text-shadow: 0.6rem 0.8rem #000;
+
+	margin-bottom: 2.1rem;
+}
+
+.meow__audit_title {
+	font-family: $font_2;
+	font-size: 4rem;
+	color: $black;
+}
+
+//
+// block end
+//
+//
+// block start
+//
+
+.meow__supply_w {
+	position: absolute;
+	left: -15vw;
+	top: -11.3vh;
+	height: 36vh;
+	width: 33vw;
+	clip-path: polygon(1.7% 21%, 87.3% 5%, 96.3% 64.3%, 14% 95.5%);
+}
+
+.meow__supply_in {
+	padding: 10.5vh 0 2rem 0;
+	height: 100%;
+
+	text-align: center;
+}
+
+.meow__supply_num {
+	line-height: 1;
+	color: $white;
+	letter-spacing: -0.025em;
+	text-transform: uppercase;
+	font-weight: 400;
+	font-size: 7rem;
+	text-shadow: 0.6rem 0.8rem #000;
+
+	margin-bottom: 2.1rem;
+}
+
+.meow__supply_title {
+	font-family: $font_2;
+	font-size: 4rem;
+	color: $black;
+}
+
+//
+// block end
+//
+//
+// block start
+//
+
+.meow__cap_w {
+	position: absolute;
+	left: -10.5vw;
+	top: -14.3vh;
+	height: 30vh;
+	width: 32vw;
+	clip-path: polygon(1.7% 41%, 86.3% 4%, 99.1% 98%, 7.6% 81%);
+}
+
+.meow__cap_in {
+	padding: 10.5vh 0 2rem 0;
+	height: 100%;
+
+	text-align: center;
+}
+
+.meow__cap_num {
+	line-height: 1;
+	color: $white;
+	letter-spacing: -0.025em;
+	text-transform: uppercase;
+	font-weight: 400;
+	font-size: 7rem;
+	text-shadow: 0.6rem 0.8rem #000;
+
+	margin-bottom: 2.1rem;
+}
+
+.meow__cap_title {
+	font-family: $font_2;
+	font-size: 4rem;
+	color: $black;
+}
+
+//
+// block end
+//
+//
+// block start
+//
+
+.meow__buy_w {
+	position: absolute;
+	left: 14.5vw;
+	top: -23.3vh;
+	height: 39.5vh;
+	width: 78vw;
+	clip-path: polygon(0% 1%, 94.7% 35%, 99.6% 100%, 0% 100%);
+}
+
+.meow__buy_in {
+	padding: 11.5vh 0vw 2rem 20vw;
+	height: 100%;
+
+	text-align: center;
+}
+
+.meow__buy_num {
+	line-height: 1;
+	color: $white;
+	letter-spacing: -0.025em;
+	text-transform: uppercase;
+	font-weight: 400;
+	font-size: 7rem;
+	text-shadow: 0.6rem 0.8rem #000;
+
+	margin-bottom: 2.1rem;
+}
+
+.meow__buy_btn_w {
+	position: relative;
+	max-width: 48rem;
+	width: 100%;
+	height: 13rem;
+
+	transform-origin: 100% 100%;
+}
+
+//
+// block end
+//

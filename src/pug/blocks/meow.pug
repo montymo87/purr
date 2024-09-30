@@ -1,25 +1,101 @@
 section.section.meow
 	.section_in.meow__in
-		.meow__col
-			.meow__hero_w.js-fade-el
+		.meow__block
+			.meow__title_w.js-fade-el
 				.meow__title_in
 					+picture({
 						img: `meow/meow.png`,
-						class: 'meow__title_img_w',
+						class: 'meow__img_w',
 						img_class: 'meow__title_img',
 						alt: 'some image',
 					})
-					h2.meow__title_title.js-opacity-el MEOWNOMICS
+					.meow__info_w
+						h2.meow__title_title.js-opacity-el MEOWNOMICS
 
-		.meow__col
+		.meow__block
 			.meow__tax_w.js-fade-el
 				.meow__tax_in
 					+picture({
 						img: `meow/tax.png`,
 						class: 'meow__img_w',
-						img_class: 'meow__img',
+						img_class: 'meow__tax_img',
 						alt: 'some image',
 					})
-					.meow__tax_num.js-opacity-el 0
-					.meow__tax_title.js-opacity-el Taxes
+					.meow__info_w
+						.meow__tax_num.js-opacity-el 0
+						.meow__tax_title.js-opacity-el Taxes
+
+		.meow__block
+			.meow__audit_w.js-fade-el
+				.meow__audit_in
+					+picture({
+						img: `meow/audit.png`,
+						class: 'meow__img_w',
+						img_class: 'meow__audit_img',
+						alt: 'some image',
+					})
+					.meow__info_w
+						+picture({
+							img: `meow/wow.svg`,
+							class: 'meow__audit_img_w js-opacity-el',
+							img_class: 'meow__audit_img',
+							alt: 'some image',
+						})
+						.meow__audit_num.js-opacity-el audited
+						.meow__audit_title.js-opacity-el Subsection
+
+		.meow__block
+			.meow__supply_w.js-fade-el
+				.meow__supply_in
+					+picture({
+						img: `meow/supply.jpg`,
+						class: 'meow__img_w',
+						img_class: 'meow__supply_img',
+						alt: 'some image',
+					})
+					.meow__info_w
+						.meow__supply_num.js-opacity-el 100m
+						.meow__supply_title.js-opacity-el Supply
+
+		.meow__block
+			.meow__cap_w.js-fade-el
+				.meow__cap_in
+					+picture({
+						img: `meow/cap.png`,
+						class: 'meow__img_w',
+						img_class: 'meow__cap_img',
+						alt: 'some image',
+					})
+					.meow__info_w
+						.meow__cap_num.js-opacity-el 1M
+						.meow__cap_title.js-opacity-el Market Cap
+
+		.meow__block
+			.meow__buy_w.js-fade-el
+				.meow__buy_in
+					+picture({
+						img: `meow/buy.png`,
+						class: 'meow__img_w',
+						img_class: 'meow__buy_img',
+						alt: 'some image',
+					})
+					.meow__buy_btn_w
+							.hero__decor_w(aria-hidden="true")
+								each item, index in ['arr-1','arr-2','arr-3','arr-4']
+									.hero__decor(class=`hero__decor--${index + 1}`)
+										+icon(item, 'icon--size_mod js-arrows-start')
+							.hero__btn_box.js-btn-start
+								+picture({
+									img: `ears.png`,
+									class: 'hero__ears_img_w js-ears-start',
+									img_class: 'hero__ears__img',
+									alt: 'some image',
+								})
+								+picture({
+									img: `tail.png`,
+									class: 'hero__tail_img_w js-tail-start',
+									img_class: 'hero__tail__img',
+									alt: 'some image',
+								})
+								a(href="https://coinmarketcap.com/currencies/catcoinofsolana/").hero__btn Join the wave!
 

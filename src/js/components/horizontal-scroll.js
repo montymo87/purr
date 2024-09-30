@@ -17,14 +17,14 @@ const horizontalScroll = () => {
 
 	let horizontalScroll = gsap.to(race, {
 		x: getScrollAmount,
-		duration: 1,
+		duration: 0.2,
 		ease: 'none',
 		scrollTrigger: {
 			trigger: '.race-wrapper',
 			start: 'top top',
 			end: () => `+=${getScrollAmount() * -1}`,
 			pin: true,
-			scrub: 3,
+			scrub: 2,
 			// markers: true,
 			invalidateOnRefresh: true,
 		},
