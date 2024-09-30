@@ -1,0 +1,175 @@
+.token {
+	width: 100vw;
+}
+
+.token__in {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	height: 100%;
+}
+
+.token__block {
+	position: relative;
+	&:nth-child(1) {
+		grid-column: span 2;
+	}
+}
+
+.token__img_w {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+
+	img {
+		@include cover_img;
+	}
+}
+
+.token__info_w {
+	position: relative;
+	z-index: 1;
+}
+
+//
+// block start
+//
+
+.token__cat_w {
+	position: absolute;
+	left: -23vw;
+	height: 49vh;
+	width: 94vw;
+	clip-path: polygon(3% 0%, 97% 0%, 100% 65%, 1.5% 100%, 0.91% 74%);
+}
+
+//
+// block end
+//
+//
+// block start
+//
+
+.token__utility_decor_w {
+	position: absolute;
+	bottom: 0;
+	left: 4vw;
+	z-index: 3;
+	width: 33rem;
+	height: 12.5rem;
+}
+
+.token__utility_decor {
+	display: block;
+	width: 100%;
+	height: 100%;
+
+	object-fit: contain;
+}
+
+.token__utility_w {
+	position: absolute;
+	left: -22vw;
+	top: -9vh;
+	height: 59vh;
+	width: 57vw;
+	clip-path: polygon(1% 18.5%, 99% 1%, 82.5% 100%, 4.5% 100%);
+}
+
+.token__utility_in {
+	padding: 18.5vh 8vw 0 6.5vw;
+	height: 100%;
+}
+
+.token__utility_title {
+	line-height: 1;
+	color: $white;
+	letter-spacing: -0.025em;
+	text-transform: uppercase;
+	font-weight: 400;
+	font-size: 5.6rem;
+	text-shadow: 0.6rem 0.8rem #000;
+
+	margin-bottom: 3.2rem;
+}
+
+.token__utility_descr {
+	font-family: $font_2;
+	font-size: 3.2rem;
+	color: $black;
+	line-height: 1.2;
+
+	strong {
+		position: relative;
+		display: inline-block;
+		color: #fbbc1a;
+		font-weight: 400;
+	}
+}
+
+//
+// block end
+//
+//
+// block start
+//
+
+.token__gov_w {
+	position: absolute;
+	left: -24vw;
+	top: -15vh;
+	height: 65vh;
+	width: 51vw;
+	clip-path: polygon(19.7% 10%, 88.8% 0%, 99.8% 100%, 1.7% 100%);
+}
+
+.token__gov_in {
+	padding: 11.5vh 6vw 0 13.5vw;
+	height: 100%;
+}
+
+.token__gov_title {
+	line-height: 1;
+	color: $white;
+	letter-spacing: -0.025em;
+	text-transform: uppercase;
+	font-weight: 400;
+	font-size: 5.6rem;
+	text-shadow: 0.6rem 0.8rem #000;
+
+	margin-bottom: 3.2rem;
+}
+
+.token__gov_descr {
+	font-family: $font_2;
+	font-size: 3.2rem;
+	color: $white;
+	line-height: 1.2;
+
+	strong {
+		position: relative;
+		display: inline-block;
+		color: #fbbc1a;
+		font-weight: 400;
+	}
+
+	&:not(:last-child) {
+		margin-bottom: 8.2rem;
+	}
+}
+
+.token__gov_btn_w {
+	position: relative;
+	height: 12.6rem;
+	width: 39.6rem;
+}
+
+//
+// block end
+//
+//
+// block start
+//

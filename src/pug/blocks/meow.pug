@@ -80,22 +80,22 @@ section.section.meow
 						alt: 'some image',
 					})
 					.meow__buy_btn_w
-							.hero__decor_w(aria-hidden="true")
-								each item, index in ['arr-1','arr-2','arr-3','arr-4']
-									.hero__decor(class=`hero__decor--${index + 1}`)
-										+icon(item, 'icon--size_mod js-arrows-start')
-							.hero__btn_box.js-btn-start
-								+picture({
-									img: `ears.png`,
-									class: 'hero__ears_img_w js-ears-start',
-									img_class: 'hero__ears__img',
-									alt: 'some image',
-								})
-								+picture({
-									img: `tail.png`,
-									class: 'hero__tail_img_w js-tail-start',
-									img_class: 'hero__tail__img',
-									alt: 'some image',
-								})
-								a(href="https://coinmarketcap.com/currencies/catcoinofsolana/").hero__btn Join the wave!
+						.hero__decor_w(aria-hidden="true")
+							each item, index in ['arr-1','arr-2','arr-3','arr-4']
+								.hero__decor(class=`hero__decor--${index + 1}`)
+									+icon(item, 'icon--size_mod')
+						.hero__btn_box
+							+picture({
+								img: `ears.png`,
+								class: 'hero__ears_img_w',
+								img_class: 'hero__ears__img',
+								alt: 'some image',
+							})
+							+picture({
+								img: `tail.png`,
+								class: 'hero__tail_img_w',
+								img_class: 'hero__tail__img',
+								alt: 'some image',
+							})
+							a(href="https://coinmarketcap.com/currencies/catcoinofsolana/").hero__btn Buy now!
 
