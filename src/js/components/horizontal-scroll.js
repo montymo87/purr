@@ -40,12 +40,12 @@ const horizontalScroll = () => {
 	});
 
 	tl.set($fadeEl, {
-		scale: 1.1,
+		// scale: 1.1,
 		opacity: 0,
 	});
 
 	ScrollTrigger.batch($fadeEl, {
-		start: 'top 85%',
+		start: 'top 80%',
 		once: true,
 		containerAnimation: horizontalScroll,
 
@@ -54,8 +54,8 @@ const horizontalScroll = () => {
 				gsap.to(item, {
 					duration: 0.4,
 					opacity: 1,
-					scale: 1,
-					y: 0,
+					// scale: 1,
+
 					stagger: 0.1,
 					ease: 'none',
 					onComplete: () => {

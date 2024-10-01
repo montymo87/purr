@@ -11,6 +11,7 @@
 	will-change: transform;
 }
 
+.js-opacity-el,
 .js-fade-start {
 	will-change: transform opacity;
 }
@@ -33,7 +34,7 @@
 
 .race-wrapper {
 	overflow: hidden;
-	background-color: #a09d9d;
+	background-color: $black;
 }
 
 .race {
@@ -52,7 +53,9 @@
 	// right: -15rem;
 	// margin-left: -10rem;
 	display: block;
-	width: 601.9vw;
+	width: 601.4vw;
+
+	// width: 600.98vw;
 	// width: 100%;
 	// background-color: #1e1e1e;
 
