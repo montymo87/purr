@@ -62,7 +62,7 @@ section.section.nft
 						alt: 'some image',
 					})
 
-					.hero__footer_box
+					.hero__footer_box.js-opacity-el
 						+picture({
 							img: `footer.png`,
 							class: 'hero__footer_img_w',
@@ -70,18 +70,26 @@ section.section.nft
 							alt: 'some image',
 						})
 						.hero__footer_box_in
-							.hero__footer_title Social media
+							.hero__footer_title.js-opacity-el Social media
 							ul.hero__footer_social_list
 								each item in list
-									li.hero__footer_social_item
+									li.hero__footer_social_item.js-opacity-el
 										a(href=item.link alt="social icon").hero__footer_social_link
 											+icon(item.name, 'icon--size_mod')
-							.hero__footer_rights All rights reserved © 2024 – #[a(href="https://catcoinofsolana.com/") catsofsolana.com]
+							.hero__footer_rights.js-opacity-el All rights reserved © 2024 – #[a(href="https://catcoinofsolana.com/") catsofsolana.com]
 
-
-					//- .nft__info
-						//- .nft__stak_title.js-opacity-el staking
-						//- .nft__stak_descr.js-opacity-el $CAT staking allow holders to lock their tokens for a specified period, eratning passive income with the best APY.
+					+picture({
+						img: `nft/continued.png`,
+						class: 'nft__end_continued js-opacity-el',
+						img_class: 'hero__footer_img',
+						alt: 'some image',
+					})
+					+picture({
+						img: `cloud.png`,
+						class: 'nft__end_cloud js-opacity-el',
+						img_class: '',
+						alt: 'some image',
+					})
 
 
 

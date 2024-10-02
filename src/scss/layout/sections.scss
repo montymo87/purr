@@ -13,7 +13,7 @@
 
 .js-opacity-el,
 .js-fade-start {
-	will-change: transform opacity;
+	will-change: transform, opacity;
 }
 
 .js-cat-img {

@@ -34,9 +34,10 @@
 .nft__hero_info_w {
 	position: absolute;
 	bottom: 13vh;
-	left: 14vw;
+	left: 50%;
 	z-index: 1;
 	width: 62.8rem;
+	transform: translateX(-37%);
 }
 
 .nft__hero_info {
@@ -50,7 +51,7 @@
 	bottom: 0;
 	left: 0;
 	width: 100%;
-	height: 96.4rem;
+	height: 76vh;
 	border-radius: 1.6rem;
 	border: 2rem solid $white;
 }
@@ -235,4 +236,37 @@
 .nft__end_in {
 	padding: 4vh 6vw 0 9.5vw;
 	height: 100%;
+}
+
+.nft__end_continued {
+	position: absolute;
+	top: 50%;
+	right: 10%;
+	z-index: 1;
+	display: block;
+	width: 40.6rem;
+	height: 10rem;
+
+	img {
+		@include contain_img;
+	}
+}
+
+.nft__end_cloud {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	z-index: 2;
+
+	width: 16.5rem;
+	height: 14.1rem;
+	overflow: hidden;
+
+	img {
+		display: block;
+		object-fit: contain;
+		object-position: 0% 0%;
+		width: 240%;
+		height: 250%;
+	}
 }
