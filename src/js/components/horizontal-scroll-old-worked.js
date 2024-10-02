@@ -1,8 +1,10 @@
 /* eslint-disable */
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import { ScrollToPlugin } from 'gsap/dist/ScrollToPlugin';
 
 gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollToPlugin);
 
 const horizontalScroll = () => {
 	const wrapper = document.querySelector('.wrapper');
@@ -17,44 +19,62 @@ const horizontalScroll = () => {
 
 	let horizontalScroll = gsap.to(race, {
 		x: getScrollAmount,
-		duration: 1,
+		duration: 0.2,
 		ease: 'none',
 		scrollTrigger: {
 			trigger: '.race-wrapper',
 			start: 'top top',
 			end: () => `+=${getScrollAmount() * -1}`,
 			pin: true,
-			scrub: 3,
+			scrub: 2,
 			// markers: true,
 			invalidateOnRefresh: true,
 		},
 	});
 
-	const fadeElements = document.querySelectorAll('.js-fade-el');
+	const $fadeEl = document.querySelectorAll('.js-fade-el');
 	const tl = gsap.timeline();
 
-	fadeElements.forEach((el, index) => {
-		gsap.from(el, {
-			// y: 50,
-			opacity: 0,
-			duration: 1,
-			scale: 1.3,
-			ease: 'power1.out',
+	tl.set('.js-opacity-el', {
+		scale: 1.1,
+		opacity: 0,
+		y: -20,
+	});
 
-			scrollTrigger: {
-				once: true,
-				trigger: el,
-				containerAnimation: horizontalScroll,
-				start: 'left 90%',
-				toggleActions: 'play none none reset',
-				id: `fade-${index}`,
-			},
-		});
-		gsap.from(el.querySelector('.js-opacity-el'), {
-			opacity: 0,
-			duration: 0.5,
-			ease: 'power1.out',
-		});
+	tl.set($fadeEl, {
+		// scale: 1.1,
+		opacity: 0,
+	});
+
+	ScrollTrigger.batch($fadeEl, {
+		start: 'top 80%',
+		once: true,
+		containerAnimation: horizontalScroll,
+
+		onEnter: (batch) => {
+			batch.forEach((item, index) => {
+				gsap.to(item, {
+					duration: 0.4,
+					opacity: 1,
+					// scale: 1,
+
+					stagger: 0.1,
+					ease: 'none',
+					onComplete: () => {
+						setTimeout(() => {
+							gsap.to(item.querySelectorAll('.js-opacity-el'), {
+								duration: 0.3,
+								opacity: 1,
+								scale: 1,
+								y: 0,
+								stagger: 0.2,
+								ease: 'none',
+							});
+						}, 200);
+					},
+				});
+			});
+		},
 	});
 };
 

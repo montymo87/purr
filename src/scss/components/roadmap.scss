@@ -84,7 +84,7 @@
 }
 
 .roadmap__born_in {
-	padding: 6.5vh 2rem 2rem 7vw;
+	padding: 5.5vh 2rem 2rem 5vw;
 	height: 100%;
 }
 
@@ -114,16 +114,30 @@
 	font-weight: 400;
 	font-size: 5.8rem;
 	text-shadow: 0.6rem 0.8rem #000;
+
+	.roadmap__meow & {
+		padding-left: 0;
+	}
+
+	.roadmap__nft & {
+		margin-bottom: 4rem;
+	}
 }
 
 .roadmap__born_list {
-	max-width: 18vw;
+	// max-width: 18vw;
+	max-width: 22vw;
 	width: 100%;
 
-	.roadmap__nft_w & {
+	&.roadmap__born_list--row_mod {
+		@include flex_block(row, wrap, flex-start);
+		gap: 4rem;
+	}
+
+	.roadmap__nft & {
 		max-width: 34vw;
 	}
-	.roadmap__meow_w & {
+	.roadmap__meow & {
 		max-width: 31vw;
 	}
 }
@@ -260,7 +274,7 @@
 }
 
 .roadmap__nft_in {
-	padding: 4vh 2rem 2rem 6vw;
+	padding: 6vh 2rem 2rem 6vw;
 }
 
 //
@@ -308,5 +322,7 @@
 }
 
 .roadmap__meow_in {
-	padding: 6.7vh 2rem 2rem 8vw;
+	@include flex_block(row, nowrap, space-between, center, center);
+	padding: 9.7vh 1rem 2rem 4vw;
+	gap: 4rem;
 }

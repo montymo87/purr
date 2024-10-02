@@ -170,12 +170,12 @@
 .hero__heading {
 	@include flex_block(column, nowrap, flex-start);
 }
-
 .hero__title {
 	line-height: 1.05;
 	color: $white;
 	text-shadow: 0.6rem 0.6rem $black;
 	font-weight: 400;
+	font-family: $font_1;
 
 	span {
 		font-family: $font_2;

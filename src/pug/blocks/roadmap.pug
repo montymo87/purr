@@ -1,7 +1,8 @@
 -
 	born = ["Launch Preparations","DEX Listings","TOP-Tier Market Maker","CMC & Coingecko"],
 	grow = ["Marketing Activities","Holder Incentives","Brand Awareness","KOL Integrations"],
-	nft = ['NFT collection development for the media exposure + marketplace, integration with external exchanges and the best MMs!',],
+	evol = ["Marketplace","CEX Listings","NFT Collection",],
+	renown = ["Ecosystem Partnerships","Utility Expansion","More Holder Rewards",]
 
 section.section.roadmap
 	.section_in.roadmap__in
@@ -14,7 +15,7 @@ section.section.roadmap
 						img_class: 'roadmap__title_img',
 						alt: 'some image',
 					})
-					h2.roadmap__title_title.js-opacity-el Roadmap
+					h2(id='roadmap').roadmap__title_title.js-opacity-el Roadmap
 
 		.roadmap__block
 			.roadmap__cat.js-fade-el
@@ -34,9 +35,9 @@ section.section.roadmap
 						img_class: 'roadmap__grow_img',
 						alt: 'some image',
 					})
-					.roadmap__born_title.js-opacity-el NFT
-					ul.roadmap__born_list
-						each item in nft
+					.roadmap__born_title.js-opacity-el Evolution
+					ul.roadmap__born_list.roadmap__born_list--row_mod
+						each item in evol
 							li.roadmap__born_item.js-opacity-el
 								.roadmap__born_icon
 									+icon('paw', 'icon--size_mod')
@@ -103,9 +104,10 @@ section.section.roadmap
 						img_class: 'roadmap__grow_img',
 						alt: 'some image',
 					})
-					.roadmap__born_title.js-opacity-el Meow!
+					.roadmap__born_title.js-opacity-el renown
 					ul.roadmap__born_list
-						li.roadmap__born_item.js-opacity-el
-							.roadmap__born_icon
-								+icon('paw', 'icon--size_mod')
-							.roadmap__born_text Expansion of the ecosystem through strategic partnerships, introduction of cross-chain capabilities and flying to the Moon!
+						each item in renown
+							li.roadmap__born_item.js-opacity-el
+								.roadmap__born_icon
+									+icon('paw', 'icon--size_mod')
+								.roadmap__born_text=item

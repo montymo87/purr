@@ -1,3 +1,4 @@
+import menu from 'components/menu';
 import copy from 'components/copy';
 import animation from 'components/animation';
 import cloud from 'components/cloud';
@@ -22,6 +23,7 @@ export default class App {
 			animation();
 			cloud();
 			start();
+			menu();
 		});
 		// setTimeout(() => {
 		// 	this.importPage();

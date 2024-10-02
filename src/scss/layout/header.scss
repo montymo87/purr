@@ -85,6 +85,10 @@
 
 .header__link_w {
 	font-family: $font_2;
+	border-radius: 6rem;
+	background-color: $white;
+	padding: 2rem 3.2rem;
+	box-shadow: 3px 3px 0 0 $black;
 
 	@include bp($point_2, min) {
 		@include flex_block(row, wrap, flex-start, center, center);
@@ -98,13 +102,13 @@
 
 .header__link_name {
 	color: $black;
-	text-shadow: 0.2rem 0.2rem $red_2;
+	// text-shadow: 0.2rem 0.2rem $red_2;
 	font-size: 2.8rem;
 }
 
 .header__link_link {
 	color: $red_2;
-	text-shadow: 0.2rem 0.2rem $black;
+	// text-shadow: 0.2rem 0.2rem $black;
 
 	@include bp($point_2, min) {
 		font-size: 2.8rem;
@@ -122,24 +126,24 @@
 .header__link_btn_copy {
 	@include flex_block(row, wrap, center, center, center);
 	height: 3.9rem;
-	border-radius: 50rem;
+	border-radius: 6rem;
 	border: 1px solid $white;
 	font-family: $font_2;
 
 	line-height: 3.9rem;
 	font-size: 2rem;
-	color: $black;
-	text-shadow: 1px 1px $red_2;
-	background-color: rgba($white, 0.3);
+	color: $white;
+	text-shadow: 1px 1px $black;
+	background-color: $green;
 	transition: background-color ease 0.3s;
 	cursor: pointer;
 
 	&:hover {
-		background-color: $white;
+		background-color: $red;
 	}
 
 	@include bp($point_2, min) {
-		padding: 0 1.4rem;
+		padding: 0.8rem 2.4rem;
 	}
 	@include bp($point_3) {
 		padding: 0 2rem;

@@ -1,0 +1,43 @@
+-
+	list = [
+		{
+			title: 'Roadmap',
+			id: 'roadmap'
+		},
+		{
+			title: 'Meownomics',
+			id: 'meownomics'
+		},
+		{
+			title: 'How to buy',
+			id: 'How-to-buy'
+		},
+		{
+			title: 'Description',
+			id: 'description'
+		},
+		{
+			title: 'Benefits',
+			id: 'benefits'
+		},
+	]
+
+.menu.js-menu
+	.menu__in
+		+picture({
+			img: `menu-bg.png`,
+			class: 'menu__img_w',
+			img_class: 'menu__img',
+			alt: 'some image',
+		})
+		.menu__box
+			button(type="button" alt="close").menu__btn_close.js-menu-btn-close
+			.menu__nav_row
+				nav.menu__nav
+					ul.menu__list
+						each item in list
+							li.menu__item
+								//- .menu__link=item.title
+								a(href=`#${item.id}`).menu__link=item.title
+						li.menu__item
+							button(type="button").menu__btn.js-buy-btn Buy $CAT

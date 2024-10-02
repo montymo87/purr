@@ -96,7 +96,7 @@
 	position: absolute;
 	z-index: 3;
 	top: 21vh;
-	left: 11.5vw;
+	left: 13vw;
 	display: block;
 	width: 9.6rem;
 	height: 7.1rem;
@@ -142,6 +142,10 @@
 		display: inline-block;
 		color: #fbbc1a;
 		font-weight: 400;
+		background-image: url('../images/line-yellow.svg');
+		background-repeat: no-repeat;
+		background-position: 0% 132%;
+		background-size: 100% auto;
 	}
 }
 
@@ -156,7 +160,7 @@
 	position: absolute;
 	z-index: 3;
 	top: 13vh;
-	left: 10vw;
+	left: 11vw;
 	display: block;
 	width: 9.6rem;
 	height: 7.1rem;
@@ -203,6 +207,10 @@
 		display: inline-block;
 		color: #467ade;
 		font-weight: 400;
+		background-image: url('../images/line-blue.svg');
+		background-repeat: no-repeat;
+		background-position: 0% 105%;
+		background-size: 100% auto;
 	}
 }
 
@@ -217,7 +225,7 @@
 	position: absolute;
 	z-index: 3;
 	top: 21vh;
-	left: 3.5vw;
+	left: 4.8vw;
 	display: block;
 	width: 9.6rem;
 	height: 7.1rem;
@@ -306,6 +314,10 @@
 		display: inline-block;
 		color: #fbbc1a;
 		font-weight: 400;
+		background-image: url('../images/line-yellow.svg');
+		background-repeat: no-repeat;
+		background-position: 0% 104%;
+		background-size: 100% auto;
 	}
 
 	&:not(:last-child) {
@@ -327,10 +339,10 @@
 	cursor: pointer;
 	text-shadow: 1px 1px #e64116;
 	box-shadow: 0.4rem 0.4rem 0 0 $black;
-	background-color: #2da34e;
+	background-color: $green_2;
 
 	&:hover {
-		background-color: #8ec24b;
+		background-color: $green;
 	}
 
 	&:not(:last-child) {

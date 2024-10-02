@@ -54,6 +54,7 @@
 	height: 76vh;
 	border-radius: 1.6rem;
 	border: 2rem solid $white;
+	pointer-events: none;
 }
 
 .nft__hero {
@@ -183,7 +184,7 @@
 }
 
 .nft__stak_in {
-	padding: 4vh 6vw 0 9.5vw;
+	padding: 6vh 6vw 0 9.5vw;
 	height: 100%;
 }
 

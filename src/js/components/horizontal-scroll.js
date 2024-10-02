@@ -1,15 +1,20 @@
 /* eslint-disable */
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import { ScrollToPlugin } from 'gsap/dist/ScrollToPlugin';
 
-gsap.registerPlugin(ScrollTrigger);
+import { getScrollLookup } from './getScrollLookup';
+
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 const horizontalScroll = () => {
 	const wrapper = document.querySelector('.wrapper');
 	const raceWrapper = document.querySelector('.race-wrapper');
 	const sections = document.querySelectorAll('.section');
 	const race = document.querySelector('.race');
+	const $menu = document.querySelector('.menu');
 
+	// for refresh width on resize
 	const getScrollAmount = () => {
 		let raceWidth = race.scrollWidth;
 		return -(raceWidth - window.innerWidth);
@@ -30,6 +35,12 @@ const horizontalScroll = () => {
 		},
 	});
 
+	const checkScroll = () => {
+		const check = () => console.log(window.scrollY);
+		const debouncedCheck = debounce(100, check);
+		window.addEventListener('scroll', debouncedCheck);
+	};
+
 	const $fadeEl = document.querySelectorAll('.js-fade-el');
 	const tl = gsap.timeline();
 
@@ -44,7 +55,7 @@ const horizontalScroll = () => {
 		opacity: 0,
 	});
 
-	ScrollTrigger.batch($fadeEl, {
+	const scrollH = ScrollTrigger.batch($fadeEl, {
 		start: 'top 80%',
 		once: true,
 		containerAnimation: horizontalScroll,
@@ -74,6 +85,46 @@ const horizontalScroll = () => {
 			});
 		},
 	});
+
+	let getPosition = getScrollLookup('.section h2', {
+		start: 'center center',
+		containerAnimation: horizontalScroll,
+	});
+
+	gsap.utils.toArray('.menu__link').forEach((el) => {
+		el.addEventListener('click', (e) => {
+			e.preventDefault();
+			gsap.to(window, {
+				scrollTo: getPosition(el.getAttribute('href')),
+				overwrite: 'auto',
+				duration: 0.4,
+			});
+		});
+	});
+
+	// gsap.set($menu, { opacity: 0 });
+
+	const menuScrollTrigger = ScrollTrigger.create({
+		trigger: '.race', // Элемент, к которому привязываем триггер
+		start: '15% 40%', // Начало анимации (20% от верха)
+		end: '85% 20%', // Конец анимации (20% от низа блока)
+		// markers: true,
+		containerAnimation: horizontalScroll,
+		onEnter: () => {
+			$menu.classList.add('menu--active');
+		},
+		onLeave: () => {
+			$menu.classList.remove('menu--active');
+		},
+		onEnterBack: () => {
+			$menu.classList.add('menu--active');
+		},
+		onLeaveBack: () => {
+			$menu.classList.remove('menu--active');
+		},
+	});
+
+	// checkScroll();
 };
 
 export default horizontalScroll;
