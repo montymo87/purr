@@ -145,7 +145,7 @@
                         <source media="(max-width: 767px)" srcset="images/roadmap/roadmap.png.webp" type="image/webp">
                         <source media="(max-width: 767px)" srcset="images/roadmap/roadmap.png" type="image/png"><img class="roadmap__title_img" src="images/roadmap/roadmap.png" alt="some image" loading="lazy">
                       </picture>
-                      <h2 class="roadmap__title_title js-opacity-el">Roadmap</h2>
+                      <h2 class="roadmap__title_title js-opacity-el" id="roadmap">Roadmap</h2>
                     </div>
                   </div>
                 </div>
@@ -164,15 +164,31 @@
                         <source media="(max-width: 767px)" srcset="images/roadmap/nft.png.webp" type="image/webp">
                         <source media="(max-width: 767px)" srcset="images/roadmap/nft.png" type="image/png"><img class="roadmap__grow_img" src="images/roadmap/nft.png" alt="some image" loading="lazy">
                       </picture>
-                      <div class="roadmap__born_title js-opacity-el">NFT</div>
-                      <ul class="roadmap__born_list">
+                      <div class="roadmap__born_title js-opacity-el">Evolution</div>
+                      <ul class="roadmap__born_list roadmap__born_list--row_mod">
                         <li class="roadmap__born_item js-opacity-el">
                           <div class="roadmap__born_icon">
                             <svg class="icon icon_paw icon--size_mod">
                               <use xlink:href="images/sprite/sprite.svg#paw"></use>
                             </svg>
                           </div>
-                          <div class="roadmap__born_text">NFT collection development for the media exposure + marketplace, integration with external exchanges and the best MMs!</div>
+                          <div class="roadmap__born_text">Marketplace</div>
+                        </li>
+                        <li class="roadmap__born_item js-opacity-el">
+                          <div class="roadmap__born_icon">
+                            <svg class="icon icon_paw icon--size_mod">
+                              <use xlink:href="images/sprite/sprite.svg#paw"></use>
+                            </svg>
+                          </div>
+                          <div class="roadmap__born_text">CEX Listings</div>
+                        </li>
+                        <li class="roadmap__born_item js-opacity-el">
+                          <div class="roadmap__born_icon">
+                            <svg class="icon icon_paw icon--size_mod">
+                              <use xlink:href="images/sprite/sprite.svg#paw"></use>
+                            </svg>
+                          </div>
+                          <div class="roadmap__born_text">NFT Collection</div>
                         </li>
                       </ul>
                     </div>
@@ -291,7 +307,7 @@
                         <source media="(max-width: 767px)" srcset="images/roadmap/meow.png.webp" type="image/webp">
                         <source media="(max-width: 767px)" srcset="images/roadmap/meow.png" type="image/png"><img class="roadmap__grow_img" src="images/roadmap/meow.png" alt="some image" loading="lazy">
                       </picture>
-                      <div class="roadmap__born_title js-opacity-el">Meow!</div>
+                      <div class="roadmap__born_title js-opacity-el">renown</div>
                       <ul class="roadmap__born_list">
                         <li class="roadmap__born_item js-opacity-el">
                           <div class="roadmap__born_icon">
@@ -299,7 +315,23 @@
                               <use xlink:href="images/sprite/sprite.svg#paw"></use>
                             </svg>
                           </div>
-                          <div class="roadmap__born_text">Expansion of the ecosystem through strategic partnerships, introduction of cross-chain capabilities and flying to the Moon!</div>
+                          <div class="roadmap__born_text">Ecosystem Partnerships</div>
+                        </li>
+                        <li class="roadmap__born_item js-opacity-el">
+                          <div class="roadmap__born_icon">
+                            <svg class="icon icon_paw icon--size_mod">
+                              <use xlink:href="images/sprite/sprite.svg#paw"></use>
+                            </svg>
+                          </div>
+                          <div class="roadmap__born_text">Utility Expansion</div>
+                        </li>
+                        <li class="roadmap__born_item js-opacity-el">
+                          <div class="roadmap__born_icon">
+                            <svg class="icon icon_paw icon--size_mod">
+                              <use xlink:href="images/sprite/sprite.svg#paw"></use>
+                            </svg>
+                          </div>
+                          <div class="roadmap__born_text">More Holder Rewards</div>
                         </li>
                       </ul>
                     </div>
@@ -317,7 +349,7 @@
                         <source media="(max-width: 767px)" srcset="images/meow/meow.png" type="image/png"><img class="meow__title_img" src="images/meow/meow.png" alt="some image" loading="lazy">
                       </picture>
                       <div class="meow__info_w">
-                        <h2 class="meow__title_title js-opacity-el">MEOWNOMICS</h2>
+                        <h2 class="meow__title_title js-opacity-el" id="meownomics">MEOWNOMICS</h2>
                       </div>
                     </div>
                   </div>
@@ -438,7 +470,7 @@
                         <source media="(max-width: 767px)" srcset="images/buy/buy-1.png" type="image/png"><img class="buy__title_img" src="images/buy/buy-1.png" alt="some image" loading="lazy">
                       </picture>
                       <div class="buy__info_w">
-                        <h2 class="buy__title_title js-opacity-el">how to <br> buy $CAT?</h2>
+                        <h2 class="buy__title_title js-opacity-el" id="How-to-buy">how to <br> buy $CAT?</h2>
                       </div>
                     </div>
                   </div>
@@ -544,7 +576,7 @@
                       </picture>
                       <div class="token__utility_decor_w js-opacity-el"><img class="token__utility_decor" src="images/token/token-decor.svg" alt="ears and paw"></div>
                       <div class="token__info_w">
-                        <h2 class="token__utility_title js-opacity-el">Token Utility:</h2>
+                        <h2 class="token__utility_title js-opacity-el" id="description">Token Utility:</h2>
                         <div class="token__utility_descr js-opacity-el">Users can use Cat Coin for transactions within our ecosystem,including purchasing exclusive NFTs, participating in governance, and accessing premium features.</div>
                       </div>
                     </div>
@@ -589,7 +621,7 @@
                       </picture>
                       <div class="nft__hero_info_w">
                         <div class="nft__hero_info">
-                          <h2 class="nft__hero_title js-opacity-el">NFT COLLECTION</h2>
+                          <h2 class="nft__hero_title js-opacity-el" id="benefits">NFT COLLECTION</h2>
                           <div class="nft__hero_descr js-opacity-el">Enjoy your unique digital assets offering exclusive airdrops, gated holder campaigns and much more...</div>
                         </div>
                         <div class="nft__hero_decor js-opacity-el"></div>
@@ -642,31 +674,64 @@
                         <source media="(max-width: 767px)" srcset="images/nft/nft-5.jpg.webp" type="image/webp">
                         <source media="(max-width: 767px)" srcset="images/nft/nft-5.jpg" type="image/jpeg"><img src="images/nft/nft-5.jpg" alt="some image" loading="lazy">
                       </picture>
-                      <div class="hero__footer_box">
+                      <div class="hero__footer_box js-opacity-el">
                         <picture class="hero__footer_img_w">
                           <source media="(max-width: 767px)" srcset="images/footer.png.webp" type="image/webp">
                           <source media="(max-width: 767px)" srcset="images/footer.png" type="image/png"><img class="hero__footer_img" src="images/footer.png" alt="some image" loading="lazy">
                         </picture>
                         <div class="hero__footer_box_in">
-                          <div class="hero__footer_title">Social media</div>
+                          <div class="hero__footer_title js-opacity-el">Social media</div>
                           <ul class="hero__footer_social_list">
-                            <li class="hero__footer_social_item"><a class="hero__footer_social_link" href="https://x.com/CatCoinofSolana" alt="social icon">
+                            <li class="hero__footer_social_item js-opacity-el"><a class="hero__footer_social_link" href="https://x.com/CatCoinofSolana" alt="social icon">
                                 <svg class="icon icon_telega icon--size_mod">
                                   <use xlink:href="images/sprite/sprite.svg#telega"></use>
                                 </svg></a></li>
-                            <li class="hero__footer_social_item"><a class="hero__footer_social_link" href="https://t.me/catcoinofsolana" alt="social icon">
+                            <li class="hero__footer_social_item js-opacity-el"><a class="hero__footer_social_link" href="https://t.me/catcoinofsolana" alt="social icon">
                                 <svg class="icon icon_x icon--size_mod">
                                   <use xlink:href="images/sprite/sprite.svg#x"></use>
                                 </svg></a></li>
                           </ul>
-                          <div class="hero__footer_rights">All rights reserved © 2024 – <a href="https://catcoinofsolana.com/">catsofsolana.com</a></div>
+                          <div class="hero__footer_rights js-opacity-el">All rights reserved © 2024 – <a href="https://catcoinofsolana.com/">catsofsolana.com</a></div>
                         </div>
                       </div>
+                      <picture class="nft__end_continued js-opacity-el">
+                        <source media="(max-width: 767px)" srcset="images/nft/continued.png.webp" type="image/webp">
+                        <source media="(max-width: 767px)" srcset="images/nft/continued.png" type="image/png"><img class="hero__footer_img" src="images/nft/continued.png" alt="some image" loading="lazy">
+                      </picture>
+                      <picture class="nft__end_cloud js-opacity-el">
+                        <source media="(max-width: 767px)" srcset="images/cloud.png.webp" type="image/webp">
+                        <source media="(max-width: 767px)" srcset="images/cloud.png" type="image/png"><img src="images/cloud.png" alt="some image" loading="lazy">
+                      </picture>
                     </div>
                   </div>
                 </div>
               </div>
             </section>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="menu js-menu">
+      <div class="menu__in">
+        <picture class="menu__img_w">
+          <source media="(max-width: 767px)" srcset="images/menu-bg.png.webp" type="image/webp">
+          <source media="(max-width: 767px)" srcset="images/menu-bg.png" type="image/png"><img class="menu__img" src="images/menu-bg.png" alt="some image" loading="lazy">
+        </picture>
+        <div class="menu__box">
+          <button class="menu__btn_close js-menu-btn-close" type="button" alt="close"></button>
+          <div class="menu__nav_row">
+            <nav class="menu__nav">
+              <ul class="menu__list">
+                <li class="menu__item"><a class="menu__link" href="#roadmap">Roadmap</a></li>
+                <li class="menu__item"><a class="menu__link" href="#meownomics">Meownomics</a></li>
+                <li class="menu__item"><a class="menu__link" href="#How-to-buy">How to buy</a></li>
+                <li class="menu__item"><a class="menu__link" href="#description">Description</a></li>
+                <li class="menu__item"><a class="menu__link" href="#benefits">Benefits</a></li>
+                <li class="menu__item">
+                  <button class="menu__btn js-buy-btn" type="button">Buy $CAT</button>
+                </li>
+              </ul>
+            </nav>
           </div>
         </div>
       </div>
