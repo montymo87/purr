@@ -14,7 +14,7 @@
 	}
 	@include bp($point_3) {
 		padding-top: var(--height-header);
-		min-height: 144rem;
+		min-height: 119rem;
 	}
 }
 
@@ -52,14 +52,13 @@
 .hero__cat_img_box {
 	z-index: 2;
 	overflow: hidden;
-
 	@include bp($point_2, min) {
 		position: absolute;
 		bottom: -0.5rem;
 		right: 2rem;
 		width: 58vw;
 		height: 86vh;
-		clip-path: polygon(26.6% 0.5%, 88.8% 8.9%, 98.2% 100%, 2.6% 100%);
+		clip-path: polygon(26.3% 0.5%, 88.8% 8.9%, 98.2% 100%, 2.6% 100%);
 	}
 	@include bp($point_3) {
 		position: relative;
@@ -102,6 +101,12 @@
 	position: absolute;
 	transition: transform ease 0.3s;
 	z-index: 1;
+
+	.hero & {
+		@include bp($point_3) {
+			display: none;
+		}
+	}
 
 	&.hero__cloud_img_box--small {
 		right: auto;
@@ -173,7 +178,7 @@
 .hero__title {
 	line-height: 1.05;
 	color: $white;
-	text-shadow: 0.6rem 0.6rem $black;
+	text-shadow: 0.6rem 0.6rem $black_2;
 	font-weight: 400;
 	font-family: $font_1;
 
@@ -215,19 +220,27 @@
 	position: absolute;
 	bottom: 0;
 
-	z-index: 2;
-	min-height: 28.9rem;
-
 	transform-origin: 50% 100%;
 
 	@include bp($point_2, min) {
+		z-index: 2;
 		padding: 10.2rem 5rem 1rem 2rem;
 		width: 42.8rem;
 		left: 35.5%;
+		min-height: 28.9rem;
 	}
 	@include bp($point_3) {
-		padding: 9.8rem 2rem 1rem;
-		width: 100%;
+		z-index: 10;
+		left: 22%;
+		padding: 7.8rem 2rem 1rem;
+		width: 23rem;
+		min-height: 17rem;
+	}
+
+	.hero & {
+		@include bp($point_3) {
+			display: none;
+		}
 	}
 }
 
@@ -253,17 +266,36 @@
 	@include bp($point_3) {
 		display: none;
 	}
+
+	.nft__end & {
+		@include bp($point_3) {
+			display: block;
+		}
+	}
 }
 
 .hero__footer_title {
 	text-align: center;
 	font-family: $font_2;
-	font-size: 4rem;
+
 	color: $white;
-	text-shadow: 2px 2px $black;
+
+	@include bp($point_2, min) {
+		text-shadow: 0.2rem 0.2rem $black_2;
+		font-size: 4rem;
+	}
+	@include bp($point_3) {
+		text-shadow: 0.3rem 0.3rem $black_2;
+		font-size: 2.2rem;
+	}
 
 	&:not(:last-child) {
-		margin-bottom: 2.2rem;
+		@include bp($point_2, min) {
+			margin-bottom: 2.2rem;
+		}
+		@include bp($point_3) {
+			margin-bottom: 1.4rem;
+		}
 	}
 }
 
@@ -272,16 +304,29 @@
 	gap: 2.2rem;
 
 	&:not(:last-child) {
-		margin-bottom: 3.2rem;
+		@include bp($point_2, min) {
+			margin-bottom: 3.2rem;
+		}
+		@include bp($point_3) {
+			margin-bottom: 1.4rem;
+		}
 	}
 }
 
 .hero__footer_social_link {
 	display: block;
-	width: 4.2rem;
-	height: 4.2rem;
-	color: $black;
+
+	color: $black_2;
 	transition: color ease 0.3s;
+
+	@include bp($point_2, min) {
+		width: 4.2rem;
+		height: 4.2rem;
+	}
+	@include bp($point_3) {
+		width: 3.2rem;
+		height: 3.2rem;
+	}
 
 	&:hover {
 		color: rgba($red, 1);
@@ -289,20 +334,27 @@
 }
 
 .hero__footer_rights {
-	color: $black;
-	font-size: 1.6rem;
+	color: $black_2;
+
 	font-family: $font_2;
 	text-align: center;
 	letter-spacing: -0.06em;
 	transition: ease color 0.3s;
 
 	a {
-		color: $black;
+		color: $black_2;
 
 		&:hover {
 			text-decoration: none;
 			color: $red;
 		}
+	}
+
+	@include bp($point_2, min) {
+		font-size: 1.6rem;
+	}
+	@include bp($point_3) {
+		font-size: 1rem;
 	}
 }
 
@@ -478,6 +530,11 @@
 		right: -4.7rem;
 		width: 11rem;
 		height: 6.6rem;
+	}
+
+	.token__gov_w &,
+	.meow__buy_w & {
+		top: 3rem;
 	}
 }
 

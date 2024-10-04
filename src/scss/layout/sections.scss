@@ -33,34 +33,48 @@
 }
 
 .race-wrapper {
-	overflow: hidden;
 	background-color: $black;
+	@include bp($point_2, min) {
+		overflow: hidden;
+	}
+	@include bp($point_3) {
+	}
 }
 
 .race {
-	@include flex_block(row, nowrap, flex-start, center, center);
-	position: relative;
-	// overflow-x: scroll;
-	width: max-content;
+	@include bp($point_2, min) {
+		@include flex_block(row, nowrap, flex-start, center, center);
+		position: relative;
+		// overflow-x: scroll;
+		width: max-content;
+	}
+	@include bp($point_3) {
+		height: 987.8rem;
+	}
 }
 
 .bg_full__img_w {
-	position: fixed;
 	top: 0;
 	left: 0;
-	// left: 7.5rem;
 	z-index: 1;
-	// right: -15rem;
-	// margin-left: -10rem;
 	display: block;
-	width: 601.4vw;
 
 	// width: 600.98vw;
 	// width: 100%;
 	// background-color: #1e1e1e;
 
-	height: var(--full-screen);
 	// aspect-ratio: 9184 / 1080;
+
+	@include bp($point_2, min) {
+		position: fixed;
+		height: var(--full-screen);
+		width: 601.4vw;
+	}
+	@include bp($point_3) {
+		position: absolute;
+		width: 100vw;
+		height: 100%;
+	}
 
 	img {
 		@include contain_img;

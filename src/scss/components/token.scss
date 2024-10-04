@@ -1,18 +1,50 @@
 .token {
 	width: 100vw;
+
+	@include bp($point_3) {
+		top: -11rem;
+	}
 }
 
 .token__in {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 1fr 1fr;
 	height: 100%;
+
+	@include bp($point_2, min) {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+	}
+	@include bp($point_3) {
+		grid-template-columns: 1fr;
+	}
 }
 
 .token__block {
 	position: relative;
 	&:nth-child(1) {
-		grid-column: span 2;
+		@include bp($point_2, min) {
+			grid-column: span 2;
+		}
+		@include bp($point_3) {
+			order: 2;
+			margin-top: -4rem;
+		}
+	}
+	&:nth-child(2) {
+		@include bp($point_2, min) {
+		}
+		@include bp($point_3) {
+			order: 1;
+			margin-top: 0rem;
+		}
+	}
+	&:nth-child(3) {
+		@include bp($point_2, min) {
+		}
+		@include bp($point_3) {
+			order: 3;
+			margin-top: -3rem;
+		}
 	}
 }
 
@@ -32,6 +64,13 @@
 .token__info_w {
 	position: relative;
 	z-index: 1;
+
+	.token__gov_w &,
+	.token__utility_w & {
+		max-width: 35rem;
+		width: 100%;
+		margin: 0 auto;
+	}
 }
 
 //
@@ -39,11 +78,18 @@
 //
 
 .token__cat_w {
-	position: absolute;
-	left: -21.4vw;
-	height: 49vh;
-	width: 94vw;
-	clip-path: polygon(3% 0%, 97.2% 0%, 100% 65%, 1.4% 100%, 0.91% 74%);
+	@include bp($point_2, min) {
+		position: absolute;
+		left: -21.4vw;
+		height: 49vh;
+		width: 94vw;
+		clip-path: polygon(3% 0%, 97.2% 0%, 100% 65%, 1.4% 100%, 0.91% 74%);
+	}
+	@include bp($point_3) {
+		height: 30rem;
+		width: 100%;
+		clip-path: polygon(0% 3%, 51% 22%, 100% 4%, 100% 95%, 50% 82%, 0% 94%);
+	}
 }
 
 //
@@ -60,6 +106,10 @@
 	z-index: 3;
 	width: 33rem;
 	height: 12.5rem;
+
+	@include bp($point_3) {
+		display: none;
+	}
 }
 
 .token__utility_decor {
@@ -71,17 +121,32 @@
 }
 
 .token__utility_w {
-	position: absolute;
-	left: -20.4vw;
-	top: -9vh;
-	height: 59vh;
-	width: 57vw;
-	clip-path: polygon(1% 18.5%, 98.8% 1.2%, 82.5% 100%, 4.7% 100%);
+	@include bp($point_2, min) {
+		position: absolute;
+		left: -20.4vw;
+		top: -9vh;
+		height: 59vh;
+		width: 57vw;
+		clip-path: polygon(1% 18.5%, 98.8% 1.2%, 82.5% 100%, 4.7% 100%);
+	}
+	@include bp($point_3) {
+		height: 34rem;
+		width: 100%;
+		clip-path: polygon(100% 6%, 100% 84%, 51% 99%, 0% 82%, 0% 2%);
+	}
 }
 
 .token__utility_in {
-	padding: 18.5vh 8vw 0 6.5vw;
 	height: 100%;
+
+	@include bp($point_2, min) {
+		padding: 18.5vh 8vw 0 6.5vw;
+	}
+	@include bp($point_3) {
+		@include flex_block(column, wrap, center, center, center);
+		text-align: center;
+		padding-bottom: 2rem;
+	}
 }
 
 .token__utility_title {
@@ -90,23 +155,33 @@
 	letter-spacing: -0.025em;
 	text-transform: uppercase;
 	font-weight: 400;
-	font-size: 5.6rem;
-	text-shadow: 0.6rem 0.8rem #000;
 
-	margin-bottom: 3.2rem;
+	@include bp($point_2, min) {
+		font-size: 5.6rem;
+		text-shadow: 0.6rem 0.8rem $black_2;
+
+		margin-bottom: 3.2rem;
+	}
+	@include bp($point_3) {
+		padding: 0 2rem;
+		font-size: 3.8rem;
+		text-shadow: 0.3rem 0.3rem $black_2;
+
+		margin-bottom: 2.4rem;
+	}
 }
 
 .token__utility_descr {
 	font-family: $font_2;
-	font-size: 3.2rem;
-	color: $black;
+
+	color: $black_2;
 	line-height: 1.2;
 
-	strong {
-		position: relative;
-		display: inline-block;
-		color: #fbbc1a;
-		font-weight: 400;
+	@include bp($point_2, min) {
+		font-size: 3.2rem;
+	}
+	@include bp($point_3) {
+		font-size: 2.2rem;
 	}
 }
 
@@ -118,17 +193,30 @@
 //
 
 .token__gov_w {
-	position: absolute;
-	left: -22.3vw;
-	top: -15vh;
-	height: 65vh;
-	width: 51vw;
-	clip-path: polygon(19.7% 10%, 88.8% 0%, 99.6% 100%, 1.5% 100%);
+	@include bp($point_2, min) {
+		position: absolute;
+		left: -22.3vw;
+		top: -15vh;
+		height: 65vh;
+		width: 51vw;
+		clip-path: polygon(19.7% 10%, 88.8% 0%, 99.6% 100%, 1.5% 100%);
+	}
+	@include bp($point_3) {
+		height: 46rem;
+		width: 100%;
+		clip-path: polygon(50% 1%, 100% 9%, 100% 98%, 0% 91%, 0% 9%);
+	}
 }
 
 .token__gov_in {
-	padding: 13.5vh 6vw 0 13.5vw;
 	height: 100%;
+	@include bp($point_2, min) {
+		padding: 13.5vh 6vw 0 13.5vw;
+	}
+	@include bp($point_3) {
+		@include flex_block(column, wrap, center, center, center);
+		text-align: center;
+	}
 }
 
 .token__gov_title {
@@ -137,34 +225,56 @@
 	letter-spacing: -0.025em;
 	text-transform: uppercase;
 	font-weight: 400;
-	font-size: 5.6rem;
-	text-shadow: 0.6rem 0.8rem #000;
 
-	margin-bottom: 3.2rem;
+	@include bp($point_2, min) {
+		font-size: 5.6rem;
+		text-shadow: 0.6rem 0.8rem $black_2;
+
+		margin-bottom: 3.2rem;
+	}
+	@include bp($point_3) {
+		font-size: 3.8rem;
+		text-shadow: 0.3rem 0.3rem $black_2;
+
+		margin-bottom: 2.4rem;
+	}
 }
 
 .token__gov_descr {
 	font-family: $font_2;
-	font-size: 3.2rem;
+
 	color: $white;
 	line-height: 1.2;
 
-	strong {
-		position: relative;
-		display: inline-block;
-		color: #fbbc1a;
-		font-weight: 400;
+	&:not(:last-child) {
+		@include bp($point_2, min) {
+			margin-bottom: 8.2rem;
+		}
+		@include bp($point_3) {
+			margin-bottom: 5rem;
+		}
 	}
 
-	&:not(:last-child) {
-		margin-bottom: 8.2rem;
+	@include bp($point_2, min) {
+		font-size: 3.2rem;
+	}
+	@include bp($point_3) {
+		font-size: 2.2rem;
 	}
 }
 
 .token__gov_btn_w {
 	position: relative;
-	height: 12.6rem;
-	width: 39.6rem;
+
+	@include bp($point_2, min) {
+		width: 39.6rem;
+		height: 12.6rem;
+	}
+	@include bp($point_3) {
+		width: 27.8rem;
+		height: 10rem;
+		margin: 0 auto;
+	}
 }
 
 //

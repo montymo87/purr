@@ -1,9 +1,9 @@
 .menu {
 	position: fixed;
-	bottom: 0;
+	bottom: -1px;
 	left: 50%;
 	width: 77vw;
-	height: 13.4rem;
+	height: 15rem;
 
 	overflow: hidden;
 	transition: transform ease 0.3s, opacity ease 0.3s;
@@ -75,7 +75,7 @@
 	max-width: 120rem;
 	width: 100%;
 	margin: auto;
-	padding: 2rem 2rem 5rem;
+	padding: 4rem 2rem 1rem;
 }
 
 .menu__link {

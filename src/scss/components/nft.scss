@@ -1,20 +1,73 @@
 .nft {
-	width: 101vw;
+	@include bp($point_2, min) {
+		width: 101vw;
+	}
+	@include bp($point_3) {
+		width: 100vw;
+		top: -13rem;
+	}
 }
 
 .nft__in {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-template-rows: 1fr 1fr;
+
 	height: 100%;
+
+	@include bp($point_2, min) {
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+	}
+	@include bp($point_3) {
+		grid-template-columns: 1fr;
+	}
 }
 
 .nft__block {
 	position: relative;
 	height: 100%;
 	&:nth-child(1) {
-		// grid-column: span 2;
-		grid-row: span 2;
+		@include bp($point_2, min) {
+			grid-row: span 2;
+		}
+		@include bp($point_3) {
+			order: 1;
+			margin-top: 0rem;
+		}
+	}
+	&:nth-child(2) {
+		@include bp($point_3) {
+			order: 3;
+			margin-top: -1rem;
+		}
+	}
+	&:nth-child(3) {
+		@include bp($point_3) {
+			order: 4;
+			top: -6rem;
+		}
+	}
+	&:nth-child(4) {
+		@include bp($point_3) {
+			order: 2;
+			margin-top: 0rem;
+		}
+	}
+	&:nth-child(5) {
+		@include bp($point_3) {
+			order: 5;
+			top: -15rem;
+		}
+	}
+}
+
+.nft__info {
+	.nft__collect &,
+	.nft__stak & {
+		@include bp($point_3) {
+			max-width: 35rem;
+			width: 100%;
+			margin: 0 auto;
+		}
 	}
 }
 
@@ -32,18 +85,36 @@
 }
 
 .nft__hero_info_w {
-	position: absolute;
-	bottom: 13vh;
-	left: 50%;
-	z-index: 1;
-	width: 62.8rem;
-	transform: translateX(-37%);
+	@include bp($point_2, min) {
+		position: absolute;
+		bottom: 13vh;
+		left: 50%;
+		z-index: 1;
+		width: 62.8rem;
+		transform: translateX(-37%);
+	}
+	@include bp($point_3) {
+		position: absolute;
+		bottom: 3rem;
+		left: 50%;
+		z-index: 1;
+		width: 100%;
+		max-width: 38rem;
+		transform: translateX(-50%);
+	}
 }
 
 .nft__hero_info {
 	background-color: $white;
-	padding: 6rem 4rem;
-	border-radius: 1.6rem;
+
+	@include bp($point_2, min) {
+		padding: 6rem 4rem;
+		border-radius: 1.6rem;
+	}
+	@include bp($point_3) {
+		padding: 2.4rem 1rem;
+		border-radius: 0.8rem;
+	}
 }
 
 .nft__hero_decor {
@@ -51,19 +122,35 @@
 	bottom: 0;
 	left: 0;
 	width: 100%;
-	height: 76vh;
-	border-radius: 1.6rem;
-	border: 2rem solid $white;
+
 	pointer-events: none;
+
+	@include bp($point_2, min) {
+		height: 76vh;
+		border: 2rem solid $white;
+		border-radius: 1.6rem;
+	}
+	@include bp($point_3) {
+		height: 44rem;
+		border: 1rem solid $white;
+		border-radius: 0.8rem;
+	}
 }
 
 .nft__hero {
-	position: absolute;
-	left: -29.2vw;
-	top: 0vh;
-	height: 100vh;
-	width: 52vw;
-	clip-path: polygon(98.1% 0%, 99.6% 59%, 93.2% 100%, 18.3% 101%, 1.7% 0%);
+	@include bp($point_2, min) {
+		position: absolute;
+		left: -29.2vw;
+		top: 0vh;
+		height: 100vh;
+		width: 52vw;
+		clip-path: polygon(98.1% 0%, 99.6% 59%, 93.2% 100%, 18.3% 101%, 1.7% 0%);
+	}
+	@include bp($point_3) {
+		height: 51rem;
+		width: 100%;
+		clip-path: polygon(0% 1%, 100% 7%, 100% 95%, 0% 99%);
+	}
 }
 
 .nft__hero_in {
@@ -73,27 +160,35 @@
 
 .nft__hero_title {
 	line-height: 1;
-	color: $black;
+	color: $black_2;
 	letter-spacing: -0.025em;
 	text-transform: uppercase;
 	font-weight: 400;
-	font-size: 5.6rem;
-	text-shadow: 0.5rem 0.5rem #f9b919;
 
-	margin-bottom: 2.8rem;
+	@include bp($point_2, min) {
+		margin-bottom: 2.8rem;
+		font-size: 5.6rem;
+		text-shadow: 0.5rem 0.5rem #f9b919;
+	}
+	@include bp($point_3) {
+		margin-bottom: 1.5rem;
+
+		text-shadow: 0.3rem 0.3rem #f9b919;
+		font-size: 3.8rem;
+	}
 }
 
 .nft__hero_descr {
 	font-family: $font_2;
-	font-size: 3.2rem;
-	color: $black;
+
+	color: $black_2;
 	line-height: 1.2;
 
-	strong {
-		position: relative;
-		display: inline-block;
-		color: #fbbc1a;
-		font-weight: 400;
+	@include bp($point_2, min) {
+		font-size: 3.2rem;
+	}
+	@include bp($point_3) {
+		font-size: 2.2rem;
 	}
 }
 
@@ -105,12 +200,19 @@
 //
 
 .nft__cat {
-	position: absolute;
-	left: -10.7vw;
-	top: 0vh;
-	height: 59.2vh;
-	width: 43vw;
-	clip-path: polygon(1.2% 0%, 99.6% 0%, 96.6% 99.6%, 2.8% 100%);
+	@include bp($point_2, min) {
+		position: absolute;
+		left: -10.7vw;
+		top: 0vh;
+		height: 59.2vh;
+		width: 43vw;
+		clip-path: polygon(1.2% 0%, 99.6% 0%, 96.6% 99.6%, 2.8% 100%);
+	}
+	@include bp($point_3) {
+		height: 41rem;
+		width: 100%;
+		clip-path: polygon(0% 2%, 100% 9%, 100% 80%, 0% 99%);
+	}
 }
 
 //
@@ -121,20 +223,32 @@
 //
 
 .nft__collect {
-	// margin-right: -1rem;
-	position: absolute;
-	// left: -0.3vw;
-	right: -0.4vw;
-	// right: 0vw;
-	top: 0vh;
-	height: 30vh;
-	width: 35vw;
-	clip-path: polygon(3.3% 0%, 100% 0%, 100% 81.9%, 1.5% 100%);
+	@include bp($point_2, min) {
+		position: absolute;
+		right: -0.4vw;
+		top: 0vh;
+		height: 30vh;
+		width: 35vw;
+		clip-path: polygon(3.3% 0%, 100% 0%, 100% 81.9%, 1.5% 100%);
+	}
+	@include bp($point_3) {
+		height: 47rem;
+		width: 100%;
+		clip-path: polygon(100% 1%, 100% 83%, 47% 76%, 0% 98%, 0% 17%);
+	}
 }
 
 .nft__collect_in {
-	padding: 3.5vh 2vw 0 2.5vw;
 	height: 100%;
+
+	@include bp($point_2, min) {
+		padding: 3.5vh 2vw 0 2.5vw;
+	}
+	@include bp($point_3) {
+		@include flex_block(column, wrap, center, center, center);
+		text-align: center;
+		padding-bottom: 5rem;
+	}
 }
 
 .nft__collect_title {
@@ -143,27 +257,38 @@
 	letter-spacing: -0.025em;
 	text-transform: uppercase;
 	font-weight: 400;
-	font-size: 5.6rem;
-	text-shadow: 0.6rem 0.8rem #000;
 
-	margin-bottom: 3.2rem;
+	@include bp($point_2, min) {
+		margin-bottom: 3.2rem;
+		font-size: 5.6rem;
+		text-shadow: 0.6rem 0.8rem $black_2;
+	}
+	@include bp($point_3) {
+		margin-bottom: 2rem;
+		padding: 0 2rem;
+
+		text-shadow: 0.3rem 0.3rem $black_2;
+		font-size: 3.8rem;
+	}
 }
 
 .nft__collect_descr {
 	font-family: $font_2;
-	font-size: 3.2rem;
+
 	color: $white;
 	line-height: 1.2;
 
-	strong {
-		position: relative;
-		display: inline-block;
-		color: #fbbc1a;
-		font-weight: 400;
+	@include bp($point_2, min) {
+		font-size: 3.2rem;
+	}
+	@include bp($point_3) {
+		font-size: 2.2rem;
 	}
 
 	&:not(:last-child) {
-		margin-bottom: 8.2rem;
+		@include bp($point_2, min) {
+			margin-bottom: 8.2rem;
+		}
 	}
 }
 
@@ -175,17 +300,30 @@
 //
 
 .nft__stak {
-	position: absolute;
-	left: -13vw;
-	top: 11vh;
-	height: 39vh;
-	width: 44vw;
-	clip-path: polygon(8% 3%, 99.3% 2%, 99% 100%, 1% 100%);
+	@include bp($point_2, min) {
+		position: absolute;
+		left: -13vw;
+		top: 11vh;
+		height: 39vh;
+		width: 44vw;
+		clip-path: polygon(8% 3%, 99.3% 2%, 99% 100%, 1% 100%);
+	}
+	@include bp($point_3) {
+		height: 30rem;
+		width: 100%;
+		clip-path: polygon(0% 8%, 100% 1%, 100% 99%, 0% 89%);
+	}
 }
 
 .nft__stak_in {
-	padding: 6vh 6vw 0 9.5vw;
 	height: 100%;
+	@include bp($point_2, min) {
+		padding: 6vh 6vw 0 9.5vw;
+	}
+	@include bp($point_3) {
+		@include flex_block(column, wrap, center, center, center);
+		text-align: center;
+	}
 }
 
 .nft__stak_title {
@@ -194,27 +332,37 @@
 	letter-spacing: -0.025em;
 	text-transform: uppercase;
 	font-weight: 400;
-	font-size: 5.6rem;
-	text-shadow: 0.6rem 0.8rem #000;
 
-	margin-bottom: 3.2rem;
+	@include bp($point_2, min) {
+		margin-bottom: 3.2rem;
+		font-size: 5.6rem;
+		text-shadow: 0.6rem 0.8rem $black_2;
+	}
+	@include bp($point_3) {
+		margin-bottom: 2rem;
+
+		text-shadow: 0.3rem 0.3rem $black_2;
+		font-size: 3.8rem;
+	}
 }
 
 .nft__stak_descr {
 	font-family: $font_2;
-	font-size: 3.2rem;
+
 	color: $white;
 	line-height: 1.2;
 
-	strong {
-		position: relative;
-		display: inline-block;
-		color: #fbbc1a;
-		font-weight: 400;
+	@include bp($point_2, min) {
+		font-size: 3.2rem;
+	}
+	@include bp($point_3) {
+		font-size: 2.2rem;
 	}
 
 	&:not(:last-child) {
-		margin-bottom: 8.2rem;
+		@include bp($point_2, min) {
+			margin-bottom: 8.2rem;
+		}
 	}
 }
 
@@ -226,27 +374,46 @@
 //
 
 .nft__end {
-	position: absolute;
-	right: -0.4vw;
-	bottom: 0vh;
-	height: 73vh;
-	width: 36vw;
-	clip-path: polygon(4% 8.5%, 101% 1%, 100% 100%, 2.3% 100%, 2.2% 49%);
+	@include bp($point_2, min) {
+		position: absolute;
+		right: -0.4vw;
+		bottom: 0vh;
+		height: 73vh;
+		width: 36vw;
+		clip-path: polygon(4% 8.5%, 101% 1%, 100% 100%, 2.3% 100%, 2.2% 49%);
+	}
+	@include bp($point_3) {
+		height: 65rem;
+		width: 100%;
+		clip-path: polygon(49% 0.5%, 100% 5.5%, 100% 100%, 0% 100%, 0 17%);
+	}
 }
 
 .nft__end_in {
-	padding: 4vh 6vw 0 9.5vw;
 	height: 100%;
+	@include bp($point_2, min) {
+		padding: 4vh 6vw 0 9.5vw;
+	}
 }
 
 .nft__end_continued {
 	position: absolute;
-	top: 50%;
-	right: 10%;
+
 	z-index: 1;
 	display: block;
-	width: 40.6rem;
-	height: 10rem;
+
+	@include bp($point_2, min) {
+		top: 50%;
+		right: 10%;
+		width: 40.6rem;
+		height: 10rem;
+	}
+	@include bp($point_3) {
+		top: 50%;
+		right: 10%;
+		width: 22.7rem;
+		height: 6rem;
+	}
 
 	img {
 		@include contain_img;
@@ -255,19 +422,46 @@
 
 .nft__end_cloud {
 	position: absolute;
-	bottom: 0;
-	right: 0;
+
 	z-index: 2;
 
-	width: 16.5rem;
-	height: 14.1rem;
 	overflow: hidden;
 
 	img {
 		display: block;
 		object-fit: contain;
-		object-position: 0% 0%;
-		width: 240%;
-		height: 250%;
+
+		@include bp($point_2, min) {
+			object-position: 0% 0%;
+			width: 240%;
+			height: 250%;
+		}
+		@include bp($point_3) {
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	@include bp($point_2, min) {
+		bottom: 0;
+		right: 0;
+		width: 16.5rem;
+		height: 14.1rem;
+	}
+	@include bp($point_3) {
+		bottom: -6rem;
+		right: -17rem;
+		width: 34.5rem;
+		height: 25.1rem;
+	}
+
+	&:last-child {
+		@include bp($point_2, min) {
+			display: none;
+		}
+		@include bp($point_3) {
+			right: auto;
+			left: -17rem;
+		}
 	}
 }

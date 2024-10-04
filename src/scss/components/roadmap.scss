@@ -1,20 +1,89 @@
 .roadmap {
 	width: 100vw;
+
+	@include bp($point_3) {
+		height: 234rem;
+	}
 }
 
 .roadmap__in {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-template-rows: 1fr 1fr 1fr;
-	height: 100%;
+	@include bp($point_2, min) {
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 1fr 1fr 1fr;
+		height: 100%;
+	}
+	@include bp($point_3) {
+		grid-template-columns: 1fr;
+	}
 }
 
 .roadmap__block {
 	position: relative;
 	height: 100%;
 	&:nth-child(2) {
-		// grid-column: span 2;
-		grid-row: span 2;
+		@include bp($point_2, min) {
+			grid-row: span 2;
+		}
+		@include bp($point_3) {
+			// top: -3rem;
+			order: 5;
+			// z-index: 2;
+		}
+	}
+
+	&:nth-child(2) {
+		@include bp($point_3) {
+			top: -18rem;
+		}
+	}
+
+	&:nth-child(3) {
+		@include bp($point_3) {
+			order: 6;
+			top: -27rem;
+		}
+	}
+
+	&:nth-child(4) {
+		@include bp($point_3) {
+			order: 2;
+			top: -3rem;
+		}
+	}
+
+	&:nth-child(5) {
+		@include bp($point_3) {
+			order: 7;
+			top: -32rem;
+		}
+	}
+
+	&:nth-child(6) {
+		@include bp($point_3) {
+			order: 3;
+			top: -9rem;
+		}
+	}
+
+	&:nth-child(7) {
+		@include bp($point_3) {
+			order: 4;
+			top: -18rem;
+		}
+	}
+
+	&:nth-child(8) {
+		@include bp($point_3) {
+			order: 8;
+			top: -37rem;
+		}
+	}
+
+	@include bp($point_2, min) {
+	}
+	@include bp($point_3) {
+		z-index: 1;
 	}
 }
 
@@ -23,34 +92,64 @@
 //
 
 .roadmap__title {
-	position: absolute;
-	top: 0;
-	left: 0vw;
-	z-index: 1;
+	background-color: #f47825;
 
-	height: 24vh;
-	width: 38.8vw;
+	@include bp($point_2, min) {
+		position: absolute;
+		top: 0;
+		left: 0vw;
+		z-index: 1;
 
-	clip-path: polygon(16% 0%, 97% 0%, 98% 92%, 9.5% 99%);
+		height: 24vh;
+		width: 38.8vw;
+
+		clip-path: polygon(16% 0%, 97% 0%, 98% 92%, 9.5% 99%);
+	}
+	@include bp($point_3) {
+		height: 20rem;
+		width: 100%;
+		clip-path: polygon(100% 14%, 100% 80%, 50% 96%, 0% 80%, 0% -1%);
+	}
 }
 
 .roadmap__title_in {
 	width: 100%;
 	height: 100%;
-	padding: 7vh 2vw 0 5vw;
+
+	@include bp($point_2, min) {
+		padding: 7vh 2vw 0 5vw;
+	}
+	@include bp($point_3) {
+		@include flex_block(row, wrap, center, center, center);
+	}
 }
 
 .roadmap__title_img_w {
 	position: absolute;
-	top: -26%;
-	left: -2%;
-	display: block;
-	width: 71.6rem;
-	height: 77.4rem;
-	transform: rotateX(-151deg) rotate(14deg);
+
+	@include bp($point_2, min) {
+		top: -26%;
+		left: -2%;
+
+		width: 71.6rem;
+		height: 77.4rem;
+		transform: rotateX(-151deg) rotate(14deg);
+	}
+	@include bp($point_3) {
+		top: 0;
+		left: 0;
+
+		width: 100%;
+		height: 100%;
+	}
 
 	img {
-		@include contain_img;
+		@include bp($point_2, min) {
+			@include contain_img;
+		}
+		@include bp($point_3) {
+			@include cover_img;
+		}
 	}
 }
 
@@ -61,9 +160,17 @@
 	color: $white;
 	text-transform: uppercase;
 	font-weight: 400;
-	font-size: 9.2rem;
+
 	letter-spacing: -0.025em;
-	text-shadow: 0.6rem 0.8rem #000;
+
+	@include bp($point_2, min) {
+		font-size: 9.2rem;
+		text-shadow: 0.6rem 0.8rem #000;
+	}
+	@include bp($point_3) {
+		font-size: 4.2rem;
+		text-shadow: 0.4rem 0.4rem #000;
+	}
 }
 
 //
@@ -75,17 +182,30 @@
 //
 
 .roadmap__born {
-	position: absolute;
-	top: -10vh;
-	left: 1.1vw;
-	height: 35vh;
-	width: 39.7vw;
-	clip-path: polygon(9.2% 10%, 97% 5.7%, 98.5% 72.9%, 2% 95%);
+	@include bp($point_2, min) {
+		position: absolute;
+		top: -10vh;
+		left: 1.1vw;
+		height: 35vh;
+		width: 39.7vw;
+		clip-path: polygon(9.2% 10%, 97% 5.7%, 98.5% 72.9%, 2% 95%);
+	}
+	@include bp($point_3) {
+		height: 33rem;
+		clip-path: polygon(50% 14%, 100% 3.5%, 100% 77%, 0% 97%, 0% 4%);
+	}
 }
 
 .roadmap__born_in {
-	padding: 5.5vh 2rem 2rem 5vw;
 	height: 100%;
+
+	@include bp($point_2, min) {
+		padding: 5.5vh 2rem 2rem 5vw;
+	}
+	@include bp($point_3) {
+		@include flex_block(column, wrap, center, center, center);
+		height: 100%;
+	}
 }
 
 .roadmap__born_img_w {
@@ -104,7 +224,7 @@
 .roadmap__born_title {
 	position: relative;
 	z-index: 1;
-	padding-left: 2vw;
+
 	margin-bottom: 2rem;
 
 	line-height: 1;
@@ -112,39 +232,89 @@
 	letter-spacing: -0.025em;
 	text-transform: uppercase;
 	font-weight: 400;
-	font-size: 5.8rem;
-	text-shadow: 0.6rem 0.8rem #000;
+
+	@include bp($point_2, min) {
+		padding-left: 2vw;
+		font-size: 5.8rem;
+		text-shadow: 0.6rem 0.8rem $black_2;
+	}
+	@include bp($point_3) {
+		// width: 100%;
+
+		text-align: center;
+		font-size: 3.8rem;
+		text-shadow: 0.3rem 0.3rem $black_2;
+	}
 
 	.roadmap__meow & {
 		padding-left: 0;
 	}
 
 	.roadmap__nft & {
-		margin-bottom: 4rem;
+		@include bp($point_2, min) {
+			margin-bottom: 4rem;
+		}
+		@include bp($point_3) {
+			margin-bottom: 2rem;
+		}
+	}
+
+	.roadmap__grow & {
+		@include bp($point_3) {
+			padding-left: 3.5rem;
+		}
 	}
 }
 
 .roadmap__born_list {
 	// max-width: 18vw;
-	max-width: 22vw;
-	width: 100%;
 
 	&.roadmap__born_list--row_mod {
 		@include flex_block(row, wrap, flex-start);
-		gap: 4rem;
+
+		@include bp($point_2, min) {
+			gap: 4rem;
+		}
+		@include bp($point_3) {
+			gap: 2rem;
+			padding: 0 2rem;
+		}
 	}
 
 	.roadmap__nft & {
-		max-width: 34vw;
+		@include bp($point_2, min) {
+			max-width: 34vw;
+		}
 	}
 	.roadmap__meow & {
-		max-width: 31vw;
+		@include bp($point_2, min) {
+			max-width: 31vw;
+		}
+	}
+
+	@include bp($point_2, min) {
+		max-width: 22vw;
+		width: 100%;
+	}
+	@include bp($point_3) {
 	}
 }
 
 .roadmap__born_item {
 	position: relative;
-	padding-left: 4rem;
+
+	@include bp($point_2, min) {
+		padding-left: 4rem;
+	}
+	@include bp($point_3) {
+		padding-left: 2.5rem;
+	}
+
+	.roadmap__born_list--row_mod & {
+		@include bp($point_3) {
+			padding: 2.5rem 0;
+		}
+	}
 
 	&:not(:last-child) {
 		margin-bottom: 0.4rem;
@@ -156,15 +326,45 @@
 	top: 0.6rem;
 	left: 0;
 
-	width: 2rem;
-	height: 2rem;
+	@include bp($point_2, min) {
+		width: 2rem;
+		height: 2rem;
+	}
+	@include bp($point_3) {
+		width: 1.4rem;
+		height: 1.4rem;
+	}
+
+	.roadmap__born_list--row_mod & {
+		@include bp($point_3) {
+			top: 0;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+
+	.roadmap__born_list--row_mod li:nth-child(2) & {
+		@include bp($point_3) {
+			top: auto;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
 }
 
 .roadmap__born_text {
 	font-family: $font_2;
-	font-size: 3.2rem;
+
 	line-height: 1.2;
 	letter-spacing: -0.025em;
+
+	@include bp($point_2, min) {
+		font-size: 3.2rem;
+	}
+	@include bp($point_3) {
+		font-size: 2.2rem;
+	}
 }
 
 //
@@ -176,12 +376,19 @@
 //
 
 .roadmap__baby {
-	position: absolute;
-	top: -15.5vh;
-	left: -2.8vw;
-	height: 49vh;
-	width: 44.7vw;
-	clip-path: polygon(10% 17.2%, 96.5% 1.5%, 99.5% 100%, 1% 100%);
+	@include bp($point_2, min) {
+		position: absolute;
+		top: -15.5vh;
+		left: -2.8vw;
+		height: 49vh;
+		width: 44.7vw;
+		clip-path: polygon(10% 17.2%, 96.5% 1.5%, 99.5% 100%, 1% 100%);
+	}
+	@include bp($point_3) {
+		height: 35rem;
+		width: 100%;
+		clip-path: polygon(0% 22%, 100% 3%, 100% 69%, 0% 97%);
+	}
 }
 
 .roadmap__baby_img_w {
@@ -203,12 +410,19 @@
 //
 
 .roadmap__cat {
-	position: absolute;
-	top: 0;
-	left: 7.2vw;
-	height: 58vh;
-	width: 30.7vw;
-	clip-path: polygon(0.8% 0%, 79% 0%, 97.5% 100%, 5% 88.5%);
+	@include bp($point_2, min) {
+		position: absolute;
+		top: 0;
+		left: 7.2vw;
+		height: 58vh;
+		width: 30.7vw;
+		clip-path: polygon(0.8% 0%, 79% 0%, 97.5% 100%, 5% 88.5%);
+	}
+	@include bp($point_3) {
+		height: 47rem;
+		width: 100%;
+		clip-path: polygon(0% 1%, 100% 3%, 100% 79%, 0% 97.5%);
+	}
 }
 
 .roadmap__cat_img_w {
@@ -230,17 +444,32 @@
 //
 
 .roadmap__grow {
-	position: absolute;
-	top: -15vh;
-	left: 7.8vw;
-	height: 49vh;
-	width: 34.2vw;
-	color: #fff;
-	clip-path: polygon(3% 6%, 86.6% 18%, 98.6% 100%, 6.5% 100%);
+	@include bp($point_2, min) {
+		position: absolute;
+		top: -15vh;
+		left: 7.8vw;
+		height: 49vh;
+		width: 34.2vw;
+		color: #fff;
+		clip-path: polygon(3% 6%, 86.6% 18%, 98.6% 100%, 6.5% 100%);
+	}
+	@include bp($point_3) {
+		height: 31rem;
+		width: 100%;
+		color: #fff;
+		clip-path: polygon(0% 34%, 100% 1.5%, 100% 98%, 0 93%);
+	}
 }
 
 .roadmap__grow_in {
-	padding: 9vh 2rem 2rem 6vw;
+	@include bp($point_2, min) {
+		padding: 9vh 2rem 2rem 6vw;
+	}
+	@include bp($point_3) {
+		@include flex_block(column, wrap, center, center, center);
+		padding-top: 3rem;
+		height: 100%;
+	}
 }
 
 .roadmap__grow_img_w {
@@ -264,17 +493,32 @@
 //
 
 .roadmap__nft {
-	position: absolute;
-	top: 0;
-	left: -0.1vw;
-	height: 31vh;
-	width: 46.6vw;
-	clip-path: polygon(0% 0%, 97.8% 0%, 100% 97.6%, 5% 83%);
 	color: #fff;
+
+	@include bp($point_2, min) {
+		position: absolute;
+		top: 0;
+		left: -0.1vw;
+		height: 31vh;
+		width: 46.6vw;
+		clip-path: polygon(0% 0%, 97.8% 0%, 100% 97.6%, 5% 83%);
+	}
+	@include bp($point_3) {
+		height: 35rem;
+		width: 100%;
+		clip-path: polygon(0% 31%, 100% 5%, 100% 81%, 0% 98%);
+	}
 }
 
 .roadmap__nft_in {
-	padding: 6vh 2rem 2rem 6vw;
+	@include bp($point_2, min) {
+		padding: 6vh 2rem 2rem 6vw;
+	}
+	@include bp($point_3) {
+		@include flex_block(column, wrap, center, center, center);
+		height: 100%;
+		padding-top: 4rem;
+	}
 }
 
 //
@@ -286,12 +530,19 @@
 //
 
 .roadmap__space {
-	position: absolute;
-	top: -4.3vh;
-	left: 2.4vw;
-	height: 35vh;
-	width: 47vw;
-	clip-path: polygon(0.5% 0%, 94% 12%, 96.2% 99.6%, 6.7% 82%);
+	@include bp($point_2, min) {
+		position: absolute;
+		top: -4.3vh;
+		left: 2.4vw;
+		height: 35vh;
+		width: 47vw;
+		clip-path: polygon(0.5% 0%, 94% 12%, 96.2% 99.6%, 6.7% 82%);
+	}
+	@include bp($point_3) {
+		height: 41rem;
+		width: 100%;
+		clip-path: polygon(0% 17%, 100% 2%, 100% 99%, 0% 83%);
+	}
 }
 
 .roadmap__space_img_w {
@@ -313,16 +564,30 @@
 //
 
 .roadmap__meow {
-	position: absolute;
-	top: -6.6vh;
-	left: 5.3vw;
-	height: 40vh;
-	width: 42.2vw;
-	clip-path: polygon(1.3% 1.7%, 100% 17.4%, 100% 100%, 11% 100%);
+	@include bp($point_2, min) {
+		position: absolute;
+		top: -6.6vh;
+		left: 5.3vw;
+		height: 40vh;
+		width: 42.2vw;
+		clip-path: polygon(1.3% 1.7%, 100% 17.4%, 100% 100%, 11% 100%);
+	}
+	@include bp($point_3) {
+		height: 29rem;
+		width: 100%;
+		clip-path: polygon(100% 24%, 100% 81.5%, 50% 97.5%, 0% 80%, 0% 3%);
+	}
 }
 
 .roadmap__meow_in {
-	@include flex_block(row, nowrap, space-between, center, center);
-	padding: 9.7vh 1rem 2rem 4vw;
-	gap: 4rem;
+	@include bp($point_2, min) {
+		@include flex_block(row, nowrap, space-between, center, center);
+		gap: 4rem;
+		padding: 9.7vh 1rem 2rem 4vw;
+	}
+	@include bp($point_3) {
+		@include flex_block(column, wrap, center, center, center);
+		height: 100%;
+		padding-top: 2rem;
+	}
 }

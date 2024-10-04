@@ -1,24 +1,75 @@
 .buy {
 	width: 100vw;
+
+	@include bp($point_3) {
+		top: -11rem;
+	}
 }
 
 .buy__in {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
-	grid-template-rows: 1fr 1fr 1fr;
+
 	height: 100%;
+
+	@include bp($point_2, min) {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-rows: 1fr 1fr 1fr;
+	}
+	@include bp($point_3) {
+		grid-template-columns: 1fr;
+	}
 }
 
 .buy__block {
 	position: relative;
+	&:nth-child(1) {
+		@include bp($point_3) {
+			order: 1;
+			// margin-top: -11rem;
+		}
+	}
 	&:nth-child(2) {
-		grid-column: span 3;
-		// grid-row: 2 / span 2;
+		@include bp($point_2, min) {
+			grid-column: span 3;
+		}
+		@include bp($point_3) {
+			order: 2;
+			margin-top: -3.2rem;
+		}
+	}
+	&:nth-child(3) {
+		@include bp($point_3) {
+			order: 3;
+			margin-top: -2rem;
+		}
+	}
+	&:nth-child(4) {
+		@include bp($point_3) {
+			order: 4;
+			margin-top: -2rem;
+		}
+	}
+	&:nth-child(5) {
+		@include bp($point_3) {
+			order: 5;
+			margin-top: -2rem;
+		}
+	}
+	&:nth-child(6) {
+		@include bp($point_3) {
+			order: 6;
+			margin-top: -3rem;
+		}
 	}
 
 	&:nth-child(7) {
-		grid-column: span 4;
-		// grid-row: 2 / span 2;
+		@include bp($point_2, min) {
+			grid-column: span 4;
+		}
+		@include bp($point_3) {
+			order: 7;
+			margin-top: -1rem;
+		}
 	}
 }
 
@@ -38,6 +89,15 @@
 .buy__info_w {
 	position: relative;
 	z-index: 1;
+
+	.buy__send_w &,
+	.buy__get_w &,
+	.buy__ins_w & {
+		@include bp($point_3) {
+			max-width: 31rem;
+			width: 100%;
+		}
+	}
 }
 
 //
@@ -45,29 +105,49 @@
 //
 
 .buy__title_w {
-	position: absolute;
-	left: -17vw;
-	height: 41vh;
-	width: 42vw;
-	clip-path: polygon(28% 0%, 95% 0%, 80% 97%, 8% 83.5%, 3% 42%);
+	@include bp($point_2, min) {
+		position: absolute;
+		left: -17vw;
+		height: 41vh;
+		width: 42vw;
+		clip-path: polygon(28% 0%, 95% 0%, 80% 97%, 8% 83.5%, 3% 42%);
+	}
+	@include bp($point_3) {
+		height: 21rem;
+		width: 100%;
+		clip-path: polygon(50% 0%, 100% 10%, 100% 93%, 0% 100%, 0% 36%);
+	}
 }
 
 .buy__title_in {
-	padding: 11.5vh 0 2rem 7vw;
 	height: 100%;
 
-	text-align: center;
+	@include bp($point_2, min) {
+		padding: 11.5vh 0 2rem 7vw;
+	}
+
+	@include bp($point_3) {
+		@include flex_block(column, wrap, center, center, center);
+	}
 }
 
 .buy__title_title {
-	text-align: left;
 	line-height: 1;
 	color: $white;
 	letter-spacing: -0.025em;
 	text-transform: uppercase;
 	font-weight: 400;
-	font-size: 8rem;
-	text-shadow: 0.6rem 0.8rem #000;
+
+	@include bp($point_2, min) {
+		text-align: left;
+		font-size: 8rem;
+		text-shadow: 0.6rem 0.8rem $black_2;
+	}
+	@include bp($point_3) {
+		text-align: center;
+		font-size: 4.2rem;
+		text-shadow: 0.4rem 0.4rem $black_2;
+	}
 }
 
 //
@@ -78,11 +158,18 @@
 //
 
 .buy__cat_w {
-	position: absolute;
-	left: -7.8vw;
-	height: 41vh;
-	width: 63vw;
-	clip-path: polygon(12.4% 0%, 99.4% 0%, 96.2% 86%, 1.9% 99%);
+	@include bp($point_2, min) {
+		position: absolute;
+		left: -7.8vw;
+		height: 41vh;
+		width: 63vw;
+		clip-path: polygon(12.4% 0%, 99.4% 0%, 96.2% 86%, 1.9% 99%);
+	}
+	@include bp($point_3) {
+		height: 29rem;
+		width: 100%;
+		clip-path: polygon(0% 11%, 100% 0%, 100% 88%, 0% 99%);
+	}
 }
 
 //
@@ -95,28 +182,51 @@
 .buy__ins_arrow {
 	position: absolute;
 	z-index: 3;
-	top: 21vh;
-	left: 13vw;
-	display: block;
-	width: 9.6rem;
-	height: 7.1rem;
+
 	object-fit: contain;
+
+	@include bp($point_2, min) {
+		top: 21vh;
+		left: 13vw;
+		width: 9.6rem;
+		height: 7.1rem;
+	}
+	@include bp($point_3) {
+		bottom: -4rem;
+		left: 31%;
+		width: 8.5rem;
+		height: 6.8rem;
+		transform: rotate(136deg);
+	}
 }
 
 .buy__ins_w {
-	position: absolute;
-	left: -14.5vw;
-	top: 4vh;
-	height: 41vh;
-	width: 34vw;
-	clip-path: polygon(3% 3%, 90.5% 15%, 79.7% 96%, 18.6% 93%);
+	@include bp($point_2, min) {
+		position: absolute;
+		left: -14.5vw;
+		top: 4vh;
+		height: 41vh;
+		width: 34vw;
+		clip-path: polygon(3% 3%, 90.5% 15%, 79.7% 96%, 18.6% 93%);
+	}
+	@include bp($point_3) {
+		height: 36rem;
+		width: 100%;
+		clip-path: polygon(0% 11%, 100% 3%, 100% 100%, 0% 89%);
+	}
 }
 
 .buy__ins_in {
-	padding: 11.5vh 6vw 0;
 	height: 100%;
 
 	text-align: center;
+	@include bp($point_2, min) {
+		padding: 11.5vh 6vw 0;
+	}
+
+	@include bp($point_3) {
+		@include flex_block(column, wrap, center, center, center);
+	}
 }
 
 .buy__ins_title {
@@ -125,16 +235,25 @@
 	letter-spacing: -0.025em;
 	text-transform: uppercase;
 	font-weight: 400;
-	font-size: 4rem;
-	text-shadow: 0.6rem 0.8rem #000;
 
-	margin-bottom: 6rem;
+	@include bp($point_2, min) {
+		font-size: 4rem;
+		text-shadow: 0.6rem 0.8rem $black_2;
+
+		margin-bottom: 6rem;
+	}
+	@include bp($point_3) {
+		font-size: 3.8rem;
+		text-shadow: 0.4rem 0.4rem $black_2;
+
+		margin-bottom: 2rem;
+	}
 }
 
 .buy__ins_descr {
 	font-family: $font_2;
-	font-size: 2.8rem;
-	color: $black;
+
+	color: $black_2;
 	line-height: 1.1;
 
 	strong {
@@ -146,6 +265,13 @@
 		background-repeat: no-repeat;
 		background-position: 0% 132%;
 		background-size: 100% auto;
+	}
+
+	@include bp($point_2, min) {
+		font-size: 2.8rem;
+	}
+	@include bp($point_3) {
+		font-size: 2.2rem;
 	}
 }
 
@@ -159,29 +285,52 @@
 .buy__get_arrow {
 	position: absolute;
 	z-index: 3;
-	top: 13vh;
-	left: 11vw;
-	display: block;
-	width: 9.6rem;
-	height: 7.1rem;
-	transform: rotate(45deg);
+
 	object-fit: contain;
+
+	@include bp($point_2, min) {
+		top: 13vh;
+		left: 11vw;
+		width: 9.6rem;
+		height: 7.1rem;
+		transform: rotate(45deg);
+	}
+	@include bp($point_3) {
+		bottom: -2.5rem;
+		left: 31%;
+		width: 8.5rem;
+		height: 6.8rem;
+		transform: rotate(66deg);
+	}
 }
 
 .buy__get_w {
-	position: absolute;
-	left: -11.5vw;
-	top: 7vh;
-	height: 39vh;
-	width: 25vw;
-	clip-path: polygon(18% 8%, 98.2% 3.7%, 95% 97.6%, 3.5% 93.5%);
+	@include bp($point_2, min) {
+		position: absolute;
+		left: -11.5vw;
+		top: 7vh;
+		height: 39vh;
+		width: 25vw;
+		clip-path: polygon(18% 8%, 98.2% 3.7%, 95% 97.6%, 3.5% 93.5%);
+	}
+	@include bp($point_3) {
+		height: 37rem;
+		width: 100%;
+		clip-path: polygon(0% 1%, 100% 12%, 100% 89%, 0% 98%);
+	}
 }
 
 .buy__get_in {
-	padding: 11.5vh 3vw 0;
 	height: 100%;
 
 	text-align: center;
+
+	@include bp($point_2, min) {
+		padding: 11.5vh 3vw 0;
+	}
+	@include bp($point_3) {
+		@include flex_block(column, wrap, center, center, center);
+	}
 }
 
 .buy__get_title {
@@ -190,16 +339,24 @@
 	letter-spacing: -0.025em;
 	text-transform: uppercase;
 	font-weight: 400;
-	font-size: 4rem;
-	text-shadow: 0.6rem 0.8rem #000;
 
-	margin-bottom: 6rem;
+	@include bp($point_2, min) {
+		font-size: 4rem;
+		text-shadow: 0.6rem 0.8rem $black_2;
+
+		margin-bottom: 6rem;
+	}
+	@include bp($point_3) {
+		font-size: 3.8rem;
+		text-shadow: 0.4rem 0.4rem $black_2;
+
+		margin-bottom: 2rem;
+	}
 }
 
 .buy__get_descr {
 	font-family: $font_2;
-	font-size: 2.8rem;
-	color: $black;
+	color: $black_2;
 	line-height: 1.1;
 
 	strong {
@@ -211,6 +368,13 @@
 		background-repeat: no-repeat;
 		background-position: 0% 105%;
 		background-size: 100% auto;
+	}
+
+	@include bp($point_2, min) {
+		font-size: 2.8rem;
+	}
+	@include bp($point_3) {
+		font-size: 2.2rem;
 	}
 }
 
@@ -224,29 +388,52 @@
 .buy__send_arrow {
 	position: absolute;
 	z-index: 3;
-	top: 21vh;
-	left: 4.8vw;
-	display: block;
-	width: 9.6rem;
-	height: 7.1rem;
-	transform: rotate(8deg);
+
 	object-fit: contain;
+
+	@include bp($point_2, min) {
+		top: 21vh;
+		left: 4.8vw;
+
+		width: 9.6rem;
+		height: 7.1rem;
+		transform: rotate(8deg);
+	}
+	@include bp($point_3) {
+		bottom: -0.5rem;
+		left: 40%;
+		width: 8.5rem;
+		height: 6.8rem;
+		transform: rotate(136deg);
+	}
 }
 
 .buy__send_w {
-	position: absolute;
-	left: -11.4vw;
-	top: 7vh;
-	height: 41vh;
-	width: 22vw;
-	clip-path: polygon(6% 3%, 77% 0%, 93% 95%, 2% 93%);
+	@include bp($point_2, min) {
+		position: absolute;
+		left: -11.4vw;
+		top: 7vh;
+		height: 41vh;
+		width: 22vw;
+		clip-path: polygon(6% 3%, 77% 0%, 93% 95%, 2% 93%);
+	}
+	@include bp($point_3) {
+		height: 41rem;
+		width: 100%;
+		clip-path: polygon(0% 9%, 100% 1%, 100% 99%, 0% 89%);
+	}
 }
 
 .buy__send_in {
-	padding: 7.5vh 4vw 0 2vw;
 	height: 100%;
 
 	text-align: center;
+	@include bp($point_2, min) {
+		padding: 7.5vh 4vw 0 2vw;
+	}
+	@include bp($point_3) {
+		@include flex_block(column, wrap, center, center, center);
+	}
 }
 
 .buy__send_title {
@@ -255,17 +442,32 @@
 	letter-spacing: -0.025em;
 	text-transform: uppercase;
 	font-weight: 400;
-	font-size: 4rem;
-	text-shadow: 0.6rem 0.8rem #000;
 
-	margin-bottom: 6rem;
+	@include bp($point_2, min) {
+		font-size: 4rem;
+		text-shadow: 0.6rem 0.8rem $black_2;
+
+		margin-bottom: 6rem;
+	}
+	@include bp($point_3) {
+		font-size: 3.8rem;
+		text-shadow: 0.4rem 0.4rem $black_2;
+
+		margin-bottom: 2rem;
+	}
 }
 
 .buy__send_descr {
 	font-family: $font_2;
-	font-size: 2.8rem;
-	color: $black;
+	color: $black_2;
 	line-height: 1.1;
+
+	@include bp($point_2, min) {
+		font-size: 2.8rem;
+	}
+	@include bp($point_3) {
+		font-size: 2.2rem;
+	}
 }
 
 //
@@ -276,19 +478,32 @@
 //
 
 .buy__buy_w {
-	position: absolute;
-	left: -17.9vw;
-	top: 4vh;
-	height: 44vh;
-	width: 23vw;
-	clip-path: polygon(0.5% 6%, 90% 2%, 98.2% 98.5%, 16% 95.5%);
+	@include bp($point_2, min) {
+		position: absolute;
+		left: -17.9vw;
+		top: 4vh;
+		height: 44vh;
+		width: 23vw;
+		clip-path: polygon(0.5% 6%, 90% 2%, 98.2% 98.5%, 16% 95.5%);
+	}
+	@include bp($point_3) {
+		height: 41rem;
+		width: 100%;
+		clip-path: polygon(0% 3%, 100% 13%, 100% 92%, 0% 99%);
+	}
 }
 
 .buy__buy_in {
-	padding: 12.5vh 3vw 0 4vw;
 	height: 100%;
 
 	text-align: center;
+
+	@include bp($point_2, min) {
+		padding: 12.5vh 3vw 0 4vw;
+	}
+	@include bp($point_3) {
+		@include flex_block(column, wrap, center, center, center);
+	}
 }
 
 .buy__buy_title {
@@ -297,16 +512,25 @@
 	letter-spacing: -0.025em;
 	text-transform: uppercase;
 	font-weight: 400;
-	font-size: 4rem;
-	text-shadow: 0.6rem 0.8rem #000;
 
-	margin-bottom: 4rem;
+	@include bp($point_2, min) {
+		font-size: 4rem;
+		text-shadow: 0.6rem 0.8rem $black_2;
+
+		margin-bottom: 6rem;
+	}
+	@include bp($point_3) {
+		font-size: 3.8rem;
+		text-shadow: 0.4rem 0.4rem $black_2;
+
+		margin-bottom: 2rem;
+	}
 }
 
 .buy__buy_descr {
 	font-family: $font_2;
-	font-size: 2.8rem;
-	color: $black;
+
+	color: $black_2;
 	line-height: 1.1;
 
 	strong {
@@ -318,6 +542,13 @@
 		background-repeat: no-repeat;
 		background-position: 0% 104%;
 		background-size: 100% auto;
+	}
+
+	@include bp($point_2, min) {
+		font-size: 2.8rem;
+	}
+	@include bp($point_3) {
+		font-size: 2.2rem;
 	}
 
 	&:not(:last-child) {
@@ -346,7 +577,12 @@
 	}
 
 	&:not(:last-child) {
-		margin-bottom: 3.8rem;
+		@include bp($point_2, min) {
+			margin-bottom: 3.8rem;
+		}
+		@include bp($point_3) {
+			margin-bottom: 2.5rem;
+		}
 	}
 }
 
@@ -358,10 +594,17 @@
 //
 
 .buy__footer_w {
-	position: absolute;
-	left: -8vw;
-	top: 10vh;
-	height: 24vh;
-	width: 89vw;
-	clip-path: polygon(0.3% 8%, 98.7% 29%, 99.5% 100%, 4% 100%);
+	@include bp($point_2, min) {
+		position: absolute;
+		left: -8vw;
+		top: 10vh;
+		height: 24vh;
+		width: 89vw;
+		clip-path: polygon(0.3% 8%, 98.7% 29%, 99.5% 100%, 4% 100%);
+	}
+	@include bp($point_3) {
+		height: 21rem;
+		width: 100%;
+		clip-path: polygon(0% 16%, 100% 2%, 100% 97%, 0% 90%);
+	}
 }
