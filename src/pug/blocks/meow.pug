@@ -40,12 +40,9 @@ section.section.meow
 						alt: 'some image',
 					})
 					.meow__info_w
-						+picture({
-							img: `meow/wow.svg`,
-							class: 'meow__audit_img_w js-opacity-el',
-							img_class: 'meow__audit_img',
-							alt: 'some image',
-						})
+						.meow__audit_img_w.js-opacity-el
+							img(src="images/meow/wow.svg", alt="")
+
 						.meow__audit_num.js-opacity-el audited
 						.meow__audit_title.js-opacity-el Subsection
 

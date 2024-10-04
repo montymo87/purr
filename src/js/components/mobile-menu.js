@@ -1,4 +1,8 @@
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { exist } from '../utils';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const menuMobile = () => {
 	const SELECTORS = {
@@ -35,7 +39,7 @@ const menuMobile = () => {
 		item.addEventListener('click', () => {
 			$menu.classList.remove(CLASSNAMES.menuActiveState);
 			$body.classList.remove(CLASSNAMES.bodyOpenMenuState);
-			console.log('test');
+			ScrollTrigger.refresh();
 		});
 	});
 };

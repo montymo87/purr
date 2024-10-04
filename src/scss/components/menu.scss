@@ -198,7 +198,7 @@
 
 	@include bp($point_2, min) {
 		@include flex_block(row, wrap, space-between, center, center);
-		padding: 6rem 2rem 1rem;
+		padding: 8rem 2rem 1rem;
 	}
 	@include bp($point_3) {
 		@include flex_block(column, nowrap, center, center, center);
@@ -242,6 +242,7 @@
 	&:focus,
 	&:hover {
 		background-color: $green_2;
+		text-decoration: none;
 	}
 
 	@include bp($point_2, min) {

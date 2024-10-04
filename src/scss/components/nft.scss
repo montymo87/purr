@@ -3,6 +3,7 @@
 		width: 101vw;
 	}
 	@include bp($point_3) {
+		height: 216rem;
 		width: 100vw;
 		top: -13rem;
 	}
@@ -279,7 +280,7 @@
 	line-height: 1.2;
 
 	@include bp($point_2, min) {
-		font-size: 3.2rem;
+		font-size: 3rem;
 	}
 	@include bp($point_3) {
 		font-size: 2.2rem;
@@ -393,6 +394,11 @@
 	height: 100%;
 	@include bp($point_2, min) {
 		padding: 4vh 6vw 0 9.5vw;
+	}
+
+	@include bp($point_3) {
+		position: relative;
+		overflow: hidden;
 	}
 }
 

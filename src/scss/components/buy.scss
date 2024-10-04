@@ -190,13 +190,34 @@
 		left: 13vw;
 		width: 9.6rem;
 		height: 7.1rem;
+		animation: 5s linear 0s infinite alternate arrow;
 	}
 	@include bp($point_3) {
 		bottom: -4rem;
-		left: 31%;
+		left: 51%;
 		width: 8.5rem;
 		height: 6.8rem;
-		transform: rotate(136deg);
+
+		animation: 5s linear 0s infinite alternate arrowm;
+	}
+
+	@keyframes arrowm {
+		from {
+			transform: rotate(120deg) scale(0.95);
+		}
+
+		to {
+			transform: rotate(150deg) scale(1.05);
+		}
+	}
+	@keyframes arrow {
+		from {
+			transform: rotate(-15deg) scale(0.95);
+		}
+
+		to {
+			transform: rotate(15deg) scale(1.05);
+		}
 	}
 }
 
@@ -293,14 +314,35 @@
 		left: 11vw;
 		width: 9.6rem;
 		height: 7.1rem;
-		transform: rotate(45deg);
+		// transform: rotate(45deg);
+		animation: 4s linear 0s infinite alternate getarrow;
 	}
 	@include bp($point_3) {
 		bottom: -2.5rem;
 		left: 31%;
 		width: 8.5rem;
 		height: 6.8rem;
-		transform: rotate(66deg);
+		// transform: rotate(66deg);
+		animation: 4s linear 0s infinite alternate getarrowm;
+	}
+
+	@keyframes getarrowm {
+		from {
+			transform: rotate(50deg) scale(1.05);
+		}
+
+		to {
+			transform: rotate(80deg) scale(0.95);
+		}
+	}
+	@keyframes getarrow {
+		from {
+			transform: rotate(25deg) scale(1.05);
+		}
+
+		to {
+			transform: rotate(55deg) scale(0.95);
+		}
 	}
 }
 
@@ -398,6 +440,7 @@
 		width: 9.6rem;
 		height: 7.1rem;
 		transform: rotate(8deg);
+		animation: 6s linear 0s infinite alternate sendarrow;
 	}
 	@include bp($point_3) {
 		bottom: -0.5rem;
@@ -405,6 +448,26 @@
 		width: 8.5rem;
 		height: 6.8rem;
 		transform: rotate(136deg);
+		animation: 6s linear 0s infinite alternate sendarrowmob;
+	}
+
+	@keyframes sendarrowmob {
+		from {
+			transform: rotate(120deg) scale(0.95);
+		}
+
+		to {
+			transform: rotate(150deg) scale(1.05);
+		}
+	}
+	@keyframes sendarrow {
+		from {
+			transform: rotate(-10deg) scale(0.95);
+		}
+
+		to {
+			transform: rotate(20deg) scale(1.05);
+		}
 	}
 }
 

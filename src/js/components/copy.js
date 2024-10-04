@@ -13,18 +13,20 @@ const copy = () => {
 
 	if (!exist($wrapper)) return;
 
-	const $btn = $wrapper.querySelector(SELECTORS.btn);
-	const $text = $wrapper.querySelector(SELECTORS.text);
+	const $btns = document.querySelectorAll(SELECTORS.btn);
+	const $text = document.querySelector(SELECTORS.text);
 
-	$btn.addEventListener('click', () => {
-		const content = $text.textContent;
+	$btns.forEach((item) => {
+		item.addEventListener('click', () => {
+			const content = $text.textContent;
 
-		const tempElement = document.createElement('textarea');
-		tempElement.value = content;
-		document.body.appendChild(tempElement);
-		tempElement.select();
-		document.execCommand('copy');
-		document.body.removeChild(tempElement);
+			const tempElement = document.createElement('textarea');
+			tempElement.value = content;
+			document.body.appendChild(tempElement);
+			tempElement.select();
+			document.execCommand('copy');
+			document.body.removeChild(tempElement);
+		});
 	});
 };
 

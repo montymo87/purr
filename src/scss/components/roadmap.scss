@@ -97,13 +97,13 @@
 	@include bp($point_2, min) {
 		position: absolute;
 		top: 0;
-		left: 0vw;
+		left: 1vw;
 		z-index: 1;
 
 		height: 24vh;
 		width: 38.8vw;
 
-		clip-path: polygon(16% 0%, 97% 0%, 98% 92%, 9.5% 99%);
+		clip-path: polygon(17% 0%, 97% 0%, 98% 92%, 10.5% 99%);
 	}
 	@include bp($point_3) {
 		height: 20rem;
