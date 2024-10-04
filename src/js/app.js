@@ -2,6 +2,8 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 import menu from 'components/menu';
+import fade from 'components/fade';
+import menuMobile from 'components/mobile-menu';
 import copy from 'components/copy';
 import animation from 'components/animation';
 import cloud from 'components/cloud';
@@ -25,14 +27,9 @@ export default class App {
 			animation();
 			cloud();
 			start();
-			// horizontalScroll();
-			// menu();
 
 			let mm = gsap.matchMedia();
-
-			// add a media query. When it matches, the associated function will run
 			mm.add('(min-width: 1024px)', () => {
-				// this setup code only runs when viewport is at least 800px wide
 				horizontalScroll();
 				menu();
 				// ScrollTrigger.refresh();
@@ -42,8 +39,12 @@ export default class App {
 				};
 			});
 
-			// later, if we need to revert all the animations/ScrollTriggers...
-			// mm.revert();
+			mm.add('(max-width: 1023px)', () => {
+				menuMobile();
+				fade();
+
+				return () => {};
+			});
 		});
 		// setTimeout(() => {
 		// 	this.importPage();

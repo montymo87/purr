@@ -22,7 +22,10 @@
 		},
 	]
 
+button(type="button" alt="open").menu_open.js-menu-btn-open
+
 .menu.js-menu
+	button(type="button" alt="close").menu__btn_close.js-menu-btn-close
 	.menu__in
 		+picture({
 			img: `menu-bg.png`,
@@ -31,7 +34,7 @@
 			alt: 'some image',
 		})
 		.menu__box
-			button(type="button" alt="close").menu__btn_close.js-menu-btn-close
+
 			.menu__nav_row
 				nav.menu__nav
 					ul.menu__list

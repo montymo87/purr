@@ -30,6 +30,10 @@
 	@include bp($point_2, min) {
 		height: var(--full-screen);
 	}
+
+	h2 {
+		scroll-margin-top: 10rem;
+	}
 }
 
 .race-wrapper {

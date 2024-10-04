@@ -10,9 +10,11 @@ const animation = () => {
 		clouds: '.js-start-cloud-img',
 		tail: '.js-tail-start',
 		ears: '.js-ears-start',
+		menuOpen: '.js-menu-btn-open',
 	};
 
 	const tlHeader = gsap.timeline({ delay: 0.2 });
+	const tlmenu = gsap.timeline({ delay: 1 });
 	const $fadeEl = document.querySelectorAll(SELECTORS.fadeEl);
 	const $arrows = document.querySelectorAll(SELECTORS.arrows);
 	const $clouds = document.querySelectorAll(SELECTORS.clouds);
@@ -21,6 +23,7 @@ const animation = () => {
 	const $footer = document.querySelector(SELECTORS.footer);
 	const $tail = document.querySelector(SELECTORS.tail);
 	const $ears = document.querySelector(SELECTORS.ears);
+	const $menuOpen = document.querySelector(SELECTORS.menuOpen);
 
 	tlHeader.from($fadeEl, {
 		opacity: 0,
@@ -102,6 +105,20 @@ const animation = () => {
 			ease: 'power1.out',
 		},
 		'-=.4',
+	);
+
+	tlmenu.fromTo(
+		$menuOpen,
+		{
+			opacity: 0,
+			ease: 'none',
+			duration: 0.3,
+
+			y: 10,
+		},
+		{
+			opacity: 1,
+		},
 	);
 };
 

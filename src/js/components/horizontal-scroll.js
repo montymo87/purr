@@ -35,12 +35,6 @@ const horizontalScroll = () => {
 		},
 	});
 
-	const checkScroll = () => {
-		const check = () => console.log(window.scrollY);
-		const debouncedCheck = debounce(100, check);
-		window.addEventListener('scroll', debouncedCheck);
-	};
-
 	const $fadeEl = document.querySelectorAll('.js-fade-el');
 	const tl = gsap.timeline();
 
@@ -51,7 +45,6 @@ const horizontalScroll = () => {
 	});
 
 	tl.set($fadeEl, {
-		// scale: 1.1,
 		opacity: 0,
 	});
 
@@ -65,7 +58,6 @@ const horizontalScroll = () => {
 				gsap.to(item, {
 					duration: 0.4,
 					opacity: 1,
-					// scale: 1,
 
 					stagger: 0.1,
 					ease: 'none',
@@ -102,12 +94,10 @@ const horizontalScroll = () => {
 		});
 	});
 
-	// gsap.set($menu, { opacity: 0 });
-
 	const menuScrollTrigger = ScrollTrigger.create({
 		trigger: '.race', // Элемент, к которому привязываем триггер
-		start: '15% 40%', // Начало анимации (20% от верха)
-		end: '85% 20%', // Конец анимации (20% от низа блока)
+		start: '15% 40%',
+		end: '85% 20%',
 		// markers: true,
 		containerAnimation: horizontalScroll,
 		onEnter: () => {
@@ -123,8 +113,6 @@ const horizontalScroll = () => {
 			$menu.classList.remove('menu--active');
 		},
 	});
-
-	// checkScroll();
 };
 
 export default horizontalScroll;
