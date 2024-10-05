@@ -24,7 +24,7 @@ export default class App {
 			document.body.classList.add('body--loaded');
 
 			copy();
-			animation();
+
 			cloud();
 			start();
 
@@ -42,6 +42,7 @@ export default class App {
 			mm.add('(max-width: 1023px)', () => {
 				menuMobile();
 				fade();
+				animation();
 
 				return () => {};
 			});

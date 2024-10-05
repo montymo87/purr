@@ -24,7 +24,18 @@
 
 button(type="button" alt="open").menu_open.js-menu-btn-open
 
+
+
 .menu.js-menu
+	.menu__logo_w
+		+picture({
+			img: `logo.png`,
+			class: 'header__img_w js-fade-start',
+			img_class: 'header__img',
+			alt: 'some image',
+		})
+		.header__logo_cta Cat Coin
+
 	button(type="button" alt="close").menu__btn_close.js-menu-btn-close
 	.menu__in
 		+picture({

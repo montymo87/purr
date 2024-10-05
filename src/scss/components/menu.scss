@@ -1,3 +1,16 @@
+.menu__logo_w {
+	@include flex_block(column, wrap, center, center, center);
+	position: absolute;
+	top: 3rem;
+	left: 50%;
+	transform: translateX(-50%);
+	text-align: center;
+
+	.header__logo_cta {
+		padding-left: 0;
+	}
+}
+
 .menu_open {
 	position: fixed;
 	z-index: 100;
@@ -252,6 +265,7 @@
 		border-radius: 6rem;
 	}
 	@include bp($point_3) {
+		display: block;
 		font-size: 2.2rem;
 		padding: 1.6rem 3rem;
 		background-color: $green;
